@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+:where(a, button, [role="button"], .clickable) {
+  cursor: pointer;
+}
