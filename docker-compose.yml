@@ -1,0 +1,14 @@
+services:
+  portfolio:
+    container_name: portfolio
+
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    image: hemendra/portfolio:1.0.0
+
+    ports:
+      - "8080:80"
+
+    restart: unless-stopped
