@@ -64,7 +64,7 @@ export const ContactPage = () => {
 
           <div className="mt-12">
             <h4 className="mb-4 text-lg font-bold text-[#0a2342]">
-              Connect on Socials
+              Connect on Social
             </h4>
             <div className="flex space-x-4">
               <a
