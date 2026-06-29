@@ -37,8 +37,11 @@ export const HomePage = ({ navigate }) => (
         <p className="mb-2 text-xl font-medium text-gray-600 md:text-2xl">
           DevSecOps Enthusiast
         </p>
-        <p className="mb-10 text-xl font-medium text-gray-600 md:text-2xl">
+        <p className="mb-2 text-xl font-medium text-gray-600 md:text-2xl">
           Banking IT Professional
+        </p>
+        <p className="mb-10 text-xl font-medium text-gray-600 md:text-2xl">
+          Chartered Banker
         </p>
 
         <div className="flex flex-col gap-4 sm:flex-row">
