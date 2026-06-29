@@ -35,7 +35,7 @@ export const HomePage = ({ navigate }) => (
           Software Developer
         </p>
         <p className="mb-2 text-xl font-medium text-gray-600 md:text-2xl">
-          DevSecOps Enthusiast
+          DevOps and DevSecOps Enthusiast
         </p>
         <p className="mb-2 text-xl font-medium text-gray-600 md:text-2xl">
           Banking IT Professional
