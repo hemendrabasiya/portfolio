@@ -9,36 +9,6 @@ export const NAV_LINKS = [
 
 export const APPLICATIONS_DATA = [
   {
-    id: "expense-tracker",
-    name: "Expense Tracker",
-    description:
-      "A comprehensive personal finance application to track daily expenses, visualize spending patterns, and manage budgets.",
-    techStack: ["React", "Node.js", "PostgreSQL", "Tailwind"],
-    status: "Live",
-    url: "https://expense.hemendrabasiya.com",
-    github: "https://github.com/hemendrabasiya/expense-tracker",
-  },
-  {
-    id: "inventory-system",
-    name: "Inventory System",
-    description:
-      "Enterprise-grade inventory management system featuring real-time stock tracking, automated reordering, and role-based access.",
-    techStack: ["React", "Express", "PostgreSQL", "Docker"],
-    status: "Live",
-    url: "https://inventory.hemendrabasiya.com",
-    github: "https://github.com/hemendrabasiya/inventory-system",
-  },
-  {
-    id: "ai-chat",
-    name: "AI Chat Interface",
-    description:
-      "Modern, responsive chat application integrating large language models for intelligent conversations and task assistance.",
-    techStack: ["React", "OpenAI API", "Tailwind CSS"],
-    status: "In Progress",
-    url: "https://chat.hemendrabasiya.com",
-    github: "https://github.com/hemendrabasiya/ai-chat",
-  },
-  {
     id: "bank-dashboard",
     name: "Bank Dashboard",
     description:
@@ -54,7 +24,7 @@ export const APPLICATIONS_DATA = [
     description:
       "The highly optimized, responsive personal portfolio you are currently viewing, built with modern frontend engineering practices.",
     techStack: ["React", "Tailwind CSS", "Vite"],
-    status: "Live",
+    status: "In Progress",
     url: "https://hemendrabasiya.com",
     github: "https://github.com/hemendrabasiya/portfolio",
   },
