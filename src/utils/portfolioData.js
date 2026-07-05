@@ -9,22 +9,12 @@ export const NAV_LINKS = [
 
 export const APPLICATIONS_DATA = [
   {
-    id: "bank-dashboard",
-    name: "Bank Dashboard",
-    description:
-      "A secure, high-performance financial dashboard demonstrating core banking IT workflows and transaction monitoring.",
-    techStack: ["React", "TypeScript", "Redux", "Chart.js"],
-    status: "Live",
-    url: "https://bank.hemendrabasiya.com",
-    github: "https://github.com/hemendrabasiya/bank-dashboard",
-  },
-  {
     id: "portfolio-website",
     name: "Portfolio Website",
     description:
       "The highly optimized, responsive personal portfolio you are currently viewing, built with modern frontend engineering practices.",
     techStack: ["React", "Tailwind CSS", "Vite"],
-    status: "In Progress",
+    status: "Live",
     url: "https://hemendrabasiya.com",
     github: "https://github.com/hemendrabasiya/portfolio",
   },
@@ -37,6 +27,16 @@ export const APPLICATIONS_DATA = [
     status: "Beta",
     url: "https://auth.hemendrabasiya.com",
     github: "https://github.com/hemendrabasiya/auth-service",
+  },
+  {
+    id: "hrms-app",
+    name: "Human Resource Management System",
+    description:
+      "A comprehensive HRMS platform designed to streamline employee management, leave tracking, payroll, and performance monitoring. Built with the PERN stack for scalability and maintainability.",
+    techStack: ["PostgreSQL", "Express.js", "React", "Node.js"],
+    status: "In Development",
+    url: "https://hrms.hemendrabasiya.com",
+    github: "https://github.com/hemendrabasiya/hrms",
   },
 ];
 
