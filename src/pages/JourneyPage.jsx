@@ -1,4 +1,4 @@
-import { Briefcase, CheckCircle, GraduationCap, MapPin } from "lucide-react";
+import { Briefcase, CheckCircle, GraduationCap, MapPin, Server, Code, GitBranch, ShieldCheck, Cloud } from "lucide-react";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { JOURNEY_DATA } from "../utils/portfolioData";
 
@@ -7,38 +7,44 @@ const iconMap = {
   briefcase: Briefcase,
   check: CheckCircle,
   map: MapPin,
+  server: Server,
+  code: Code,
+  "git-branch": GitBranch,
+  "shield-check": ShieldCheck,
+  cloud: Cloud,
 };
 
 export const JourneyPage = () => (
-  <div className="py-12 animate-in fade-in duration-500">
+  <div className="py-12 md:py-20 animate-fade-in">
     <SectionHeading
-      title="Career Journey"
-      subtitle="The progression of my academic and professional life, showing my path to software engineering."
+      title="Engineering Journey"
+      subtitle="How I evolved from Civil Engineering to Banking IT, and finally to Enterprise DevOps and Platform Engineering."
     />
-    <div className="relative mx-auto mt-8 max-w-3xl">
-      <div className="absolute bottom-0 left-6 top-0 w-0.5 -translate-x-1/2 bg-gray-200 md:left-1/2"></div>
+    <div className="relative mx-auto mt-16 max-w-4xl">
+      <div className="absolute bottom-0 left-6 top-0 w-0.5 -translate-x-1/2 bg-slate-200 md:left-1/2 rounded-full"></div>
 
       {JOURNEY_DATA.map((item, index) => {
-        const Icon = iconMap[item.icon];
+        const Icon = iconMap[item.icon] || CheckCircle;
         return (
           <div
             key={item.year}
-            className={`relative mb-12 flex items-center ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}
+            className={`relative mb-16 flex items-center w-full animate-slide-up ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}
+            style={{ animationDelay: `${index * 150}ms` }}
           >
-            <div className="absolute left-6 z-10 flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full border-4 border-[#10b981] bg-white text-[#0a2342] md:left-1/2">
-              <Icon size={20} />
+            <div className="absolute left-6 z-10 flex h-14 w-14 -translate-x-1/2 items-center justify-center rounded-full border-4 border-slate-50 bg-emerald-500 text-white shadow-lg md:left-1/2">
+              <Icon size={24} />
             </div>
             <div
-              className={`w-full pl-16 pr-4 md:w-1/2 md:pl-8 md:pr-12 ${index % 2 === 0 ? "md:pl-12 md:pr-8" : ""}`}
+              className={`w-full pl-16 pr-4 md:w-1/2 md:pl-10 md:pr-12 ${index % 2 === 0 ? "md:pl-12 md:pr-10" : ""}`}
             >
-              <div className="rounded-lg border border-gray-100 bg-[#f8fafc] p-6 shadow-sm transition-shadow hover:shadow-md">
-                <span className="mb-1 block text-sm font-bold uppercase tracking-wider text-[#10b981]">
+              <div className="rounded-2xl border border-slate-100 bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                <span className="mb-3 inline-block rounded-full bg-emerald-50 px-4 py-1 text-sm font-bold uppercase tracking-wider text-emerald-600">
                   {item.year}
                 </span>
-                <h3 className="mb-2 text-xl font-bold text-[#0a2342]">
+                <h3 className="mb-3 text-2xl font-bold text-slate-900 font-heading">
                   {item.title}
                 </h3>
-                <p className="text-gray-600">{item.description}</p>
+                <p className="text-slate-600 leading-relaxed">{item.description}</p>
               </div>
             </div>
           </div>

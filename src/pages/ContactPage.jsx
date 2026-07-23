@@ -14,56 +14,56 @@ export const ContactPage = () => {
   };
 
   return (
-    <div className="py-12 animate-in fade-in duration-500">
+    <div className="py-12 md:py-20 animate-fade-in">
       <SectionHeading
         title="Get in Touch"
         subtitle="I am currently open to new opportunities, especially roles based in fintech. Feel free to reach out."
       />
-      <div className="mt-8 grid gap-12 md:grid-cols-2">
+      <div className="mt-12 grid gap-12 md:grid-cols-2">
         <div>
           <div className="space-y-8">
-            <div className="flex items-start">
-              <div className="mr-4 rounded-full bg-[#e2e8f0] p-3 text-[#0a2342]">
+            <div className="flex items-start group">
+              <div className="mr-5 rounded-2xl bg-emerald-50 p-4 text-emerald-600 shadow-sm transition-transform group-hover:-translate-y-1 group-hover:shadow-md">
                 <Mail size={24} />
               </div>
               <div>
-                <h4 className="text-lg font-bold text-[#0a2342]">Email</h4>
+                <h4 className="text-lg font-bold text-slate-900 font-heading">Email</h4>
                 <a
                   href="mailto:hemendra.basia@gmail.com"
-                  className="text-gray-600 transition-colors hover:text-[#10b981]"
+                  className="text-slate-600 transition-colors hover:text-emerald-600 font-medium"
                 >
                   hemendra.basia@gmail.com
                 </a>
               </div>
             </div>
 
-            <div className="flex items-start">
-              <div className="mr-4 rounded-full bg-[#e2e8f0] p-3 text-[#0a2342]">
+            <div className="flex items-start group">
+              <div className="mr-5 rounded-2xl bg-emerald-50 p-4 text-emerald-600 shadow-sm transition-transform group-hover:-translate-y-1 group-hover:shadow-md">
                 <MapPin size={24} />
               </div>
               <div>
-                <h4 className="text-lg font-bold text-[#0a2342]">Location</h4>
-                <p className="text-gray-600">Vadodara, Gujarat, India</p>
+                <h4 className="text-lg font-bold text-slate-900 font-heading">Location</h4>
+                <p className="text-slate-600 font-medium">Vadodara, Gujarat, India</p>
               </div>
             </div>
 
-            <div className="flex items-start">
-              <div className="mr-4 rounded-full bg-[#e2e8f0] p-3 text-[#0a2342]">
+            <div className="flex items-start group">
+              <div className="mr-5 rounded-2xl bg-emerald-50 p-4 text-emerald-600 shadow-sm transition-transform group-hover:-translate-y-1 group-hover:shadow-md">
                 <Briefcase size={24} />
               </div>
               <div>
-                <h4 className="text-lg font-bold text-[#0a2342]">
+                <h4 className="text-lg font-bold text-slate-900 font-heading">
                   Availability
                 </h4>
-                <p className="text-gray-600">
+                <p className="text-slate-600 font-medium">
                   Open for full-time opportunities
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mt-12">
-            <h4 className="mb-4 text-lg font-bold text-[#0a2342]">
+          <div className="mt-16">
+            <h4 className="mb-6 text-lg font-bold text-slate-900 font-heading">
               Connect on Social
             </h4>
             <div className="flex space-x-4">
@@ -71,7 +71,7 @@ export const ContactPage = () => {
                 href="https://github.com/hemendrabasiya"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-md border border-gray-200 bg-[#f8fafc] p-3 text-gray-600 transition-all hover:border-[#0a2342] hover:text-[#0a2342]"
+                className="rounded-xl border border-slate-200 bg-white p-4 text-slate-600 shadow-sm transition-all hover:-translate-y-1 hover:border-slate-300 hover:text-slate-900 hover:shadow-md"
               >
                 <GithubIcon size={24} />
               </a>
@@ -79,7 +79,7 @@ export const ContactPage = () => {
                 href="https://www.linkedin.com/in/hemendra-basiya-acbi-221793168"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-md border border-gray-200 bg-[#f8fafc] p-3 text-gray-600 transition-all hover:border-[#0077b5] hover:text-[#0077b5]"
+                className="rounded-xl border border-slate-200 bg-white p-4 text-slate-600 shadow-sm transition-all hover:-translate-y-1 hover:border-blue-500 hover:text-blue-600 hover:shadow-md"
               >
                 <LinkedinIcon size={24} />
               </a>
@@ -87,21 +87,21 @@ export const ContactPage = () => {
           </div>
         </div>
 
-        <div className="rounded-lg border border-gray-100 bg-[#f8fafc] p-8">
-          <h3 className="mb-6 text-2xl font-bold text-[#0a2342]">
+        <div className="rounded-3xl border border-slate-200/60 glass bg-white/70 p-8 md:p-10 shadow-sm">
+          <h3 className="mb-8 text-2xl font-bold text-slate-900 font-heading">
             Send a Message
           </h3>
           {formStatus === "success" ? (
-            <div className="flex items-center rounded-md border border-green-200 bg-green-50 p-4 text-green-800">
-              <CheckCircle className="mr-2" size={20} />
-              Thank you! Your message has been sent successfully.
+            <div className="flex items-center rounded-xl border border-emerald-200 bg-emerald-50 p-6 text-emerald-800 shadow-inner">
+              <CheckCircle className="mr-3 text-emerald-500" size={24} />
+              <span className="font-medium">Thank you! Your message has been sent successfully.</span>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
                   htmlFor="name"
-                  className="mb-1 block text-sm font-medium text-gray-700"
+                  className="mb-2 block text-sm font-semibold text-slate-700"
                 >
                   Name
                 </label>
@@ -109,14 +109,14 @@ export const ContactPage = () => {
                   required
                   type="text"
                   id="name"
-                  className="w-full rounded-md border border-gray-300 bg-white px-4 py-2 outline-none transition-shadow focus:border-transparent focus:ring-2 focus:ring-[#10b981]"
+                  className="w-full rounded-xl border border-slate-300 bg-white/80 px-4 py-3 outline-none transition-all focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 placeholder:text-slate-400 shadow-sm"
                   placeholder="John Doe"
                 />
               </div>
               <div>
                 <label
                   htmlFor="email"
-                  className="mb-1 block text-sm font-medium text-gray-700"
+                  className="mb-2 block text-sm font-semibold text-slate-700"
                 >
                   Email
                 </label>
@@ -124,14 +124,14 @@ export const ContactPage = () => {
                   required
                   type="email"
                   id="email"
-                  className="w-full rounded-md border border-gray-300 bg-white px-4 py-2 outline-none transition-shadow focus:border-transparent focus:ring-2 focus:ring-[#10b981]"
+                  className="w-full rounded-xl border border-slate-300 bg-white/80 px-4 py-3 outline-none transition-all focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 placeholder:text-slate-400 shadow-sm"
                   placeholder="john@example.com"
                 />
               </div>
               <div>
                 <label
                   htmlFor="message"
-                  className="mb-1 block text-sm font-medium text-gray-700"
+                  className="mb-2 block text-sm font-semibold text-slate-700"
                 >
                   Message
                 </label>
@@ -139,14 +139,14 @@ export const ContactPage = () => {
                   required
                   id="message"
                   rows="4"
-                  className="w-full resize-none rounded-md border border-gray-300 bg-white px-4 py-2 outline-none transition-shadow focus:border-transparent focus:ring-2 focus:ring-[#10b981]"
+                  className="w-full resize-none rounded-xl border border-slate-300 bg-white/80 px-4 py-3 outline-none transition-all focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 placeholder:text-slate-400 shadow-sm"
                   placeholder="How can we work together?"
                 ></textarea>
               </div>
               <Button
                 type="submit"
                 variant="primary"
-                className="flex w-full justify-center py-3"
+                className="flex w-full justify-center py-4 text-base"
                 disabled={formStatus === "submitting"}
               >
                 {formStatus === "submitting" ? "Sending..." : "Send Message"}

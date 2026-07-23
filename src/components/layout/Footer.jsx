@@ -2,30 +2,32 @@ import { Mail, MapPin } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../icons/SocialIcons";
 
 export const Footer = () => (
-  <footer className="border-t border-[#15345b] bg-[#0a2342] py-12 text-white">
+  <footer className="border-t border-slate-200 bg-white py-16 text-slate-800">
     <div className="mx-auto max-w-6xl px-4 md:px-8">
-      <div className="grid gap-8 md:grid-cols-3">
+      <div className="grid gap-12 md:grid-cols-3">
         <div>
-          <span className="mb-4 block text-2xl font-black tracking-tight text-white">
-            HB<span className="text-[#10b981]">.</span>
+          <span className="mb-4 block text-2xl font-black tracking-tight text-slate-900 font-heading">
+            HB<span className="text-emerald-500">.</span>
           </span>
-          <p className="max-w-sm text-gray-400">
+          <p className="max-w-sm text-slate-600 leading-relaxed">
             Hemendra Basiya — Software Developer & DevOps/DevSecOps Enthusiast
             building scalable and secure digital infrastructure.
           </p>
         </div>
 
         <div>
-          <h4 className="mb-4 text-lg font-bold text-white">Quick Links</h4>
-          <ul className="space-y-2 text-gray-400">
+          <h4 className="mb-6 text-lg font-bold text-slate-900 font-heading">
+            Quick Links
+          </h4>
+          <ul className="space-y-4 text-slate-600">
             <li>
               <a
                 href="https://github.com/hemendrabasiya"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center transition-colors hover:text-[#10b981]"
+                className="flex items-center w-fit transition-colors hover:text-emerald-600"
               >
-                <GithubIcon size={16} className="mr-2" /> GitHub
+                <GithubIcon size={18} className="mr-3" /> GitHub
               </a>
             </li>
             <li>
@@ -33,31 +35,34 @@ export const Footer = () => (
                 href="https://www.linkedin.com/in/hemendra-basiya-acbi-221793168"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center transition-colors hover:text-[#10b981]"
+                className="flex items-center w-fit transition-colors hover:text-emerald-600"
               >
-                <LinkedinIcon size={16} className="mr-2" /> LinkedIn
+                <LinkedinIcon size={18} className="mr-3" /> LinkedIn
               </a>
             </li>
             <li>
               <a
                 href="mailto:hemendra.basia@gmail.com"
-                className="flex items-center transition-colors hover:text-[#10b981]"
+                className="flex items-center w-fit transition-colors hover:text-emerald-600"
               >
-                <Mail size={16} className="mr-2" /> Email
+                <Mail size={18} className="mr-3" /> Email
               </a>
             </li>
           </ul>
         </div>
 
         <div>
-          <h4 className="mb-4 text-lg font-bold text-white">Contact</h4>
-          <p className="mb-2 flex items-center text-gray-400">
-            <MapPin size={16} className="mr-2" /> Vadodara, Gujarat, India
+          <h4 className="mb-6 text-lg font-bold text-slate-900 font-heading">
+            Location
+          </h4>
+          <p className="flex items-center text-slate-600">
+            <MapPin size={18} className="mr-3 text-emerald-500" /> Vadodara,
+            Gujarat, India
           </p>
         </div>
       </div>
 
-      <div className="mt-12 border-t border-[#15345b] pt-8 text-center text-sm text-gray-500">
+      <div className="mt-16 flex flex-col md:flex-row items-center justify-between border-t border-slate-100 pt-8 text-sm text-slate-500">
         <p>
           &copy; {new Date().getFullYear()} Hemendra Basiya. All rights
           reserved.

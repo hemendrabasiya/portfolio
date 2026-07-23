@@ -1,7 +1,8 @@
 export const NAV_LINKS = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
-  { id: "applications", label: "Applications" },
+  { id: "engineering", label: "Engineering" },
+  { id: "applications", label: "Work" },
   { id: "journey", label: "Journey" },
   { id: "skills", label: "Skills" },
   { id: "contact", label: "Contact" },
@@ -43,91 +44,113 @@ export const APPLICATIONS_DATA = [
 export const JOURNEY_DATA = [
   {
     year: "2014",
-    title: "B.Tech Civil Engineering",
+    title: "Civil Engineering",
     description:
-      "Graduated with a foundation in analytical thinking and structural problem-solving.",
+      "Graduated with a B.Tech. This built my core problem-solving framework and taught me the importance of structural integrity—principles I now apply to software architecture.",
     icon: "graduation",
   },
   {
     year: "2017",
-    title: "Joined Banking",
+    title: "Banking Operations",
     description:
-      "Transitioned into the banking sector, focusing on branch banking and customer's problem solving.",
+      "Developed a deep understanding of financial workflows, strict compliance, and the absolute necessity of data accuracy.",
     icon: "briefcase",
+  },
+  {
+    year: "2020",
+    title: "Banking IT",
+    description:
+      "Transitioned into IT operations, learning the critical importance of high availability and production support in a regulated environment.",
+    icon: "server",
   },
   {
     year: "2022",
-    title: "Assistant Manager",
+    title: "Enterprise Infrastructure",
     description:
-      "Led IT operations, managed core banking infrastructure, and improved system reliability.",
-    icon: "briefcase",
+      "Managed core networks, Microsoft 365, vendor relationships, and ensured zero downtime for branch operations.",
+    icon: "server",
+  },
+  {
+    year: "2024",
+    title: "Software Development",
+    description:
+      "Transitioned to full-stack engineering, leveraging my operational background to write maintainable code using the PERN stack.",
+    icon: "code",
   },
   {
     year: "2025",
-    title: "Started PERN Stack Development",
+    title: "Enterprise HRMS",
     description:
-      "Shifted focus towards full-stack software development, mastering PostgreSQL, Express, React, and Node.js.",
+      "Architected and developed a comprehensive HRMS platform, applying enterprise patterns to solve complex authentication, RBAC, and data management challenges.",
     icon: "check",
+  },
+  {
+    year: "2025",
+    title: "DevOps",
+    description:
+      "Embraced continuous integration and delivery. Implemented Docker and GitHub Actions to automate testing and deployments.",
+    icon: "git-branch",
   },
   {
     year: "2026",
-    title: "DevSecOps & Cloud Engineering",
+    title: "Secure Software Delivery",
     description:
-      "Expanded expertise into Docker, CI/CD pipelines, security integrations, and scalable deployments.",
-    icon: "check",
+      "Integrated 'Shift-Left' security into my DevOps lifecycle using Trivy, Semgrep, and OWASP ZAP as quality checkpoints.",
+    icon: "shield-check",
   },
   {
     year: "Future",
-    title: "Fintech (Target)",
+    title: "Cloud & Platform Engineering (Learning)",
     description:
-      "Seeking a challenging role as a Software Developer / DevSecOps Engineer in Fintech.",
-    icon: "map",
+      "Currently expanding my expertise into AWS, Azure, and Kubernetes to build highly resilient, distributed systems.",
+    icon: "cloud",
   },
 ];
 
 export const SKILLS_DATA = [
   {
-    category: "Frontend",
-    skills: [
-      "HTML5",
-      "CSS3",
-      "JavaScript (ES6+)",
-      "React.js",
-      "Tailwind CSS",
-      "Responsive Design",
-    ],
+    category: "Frontend Engineering",
+    description: "Building responsive, accessible, and performant user interfaces.",
+    skills: ["React", "JavaScript (ES6+)", "Tailwind CSS", "Vite", "HTML5/CSS3"],
   },
   {
-    category: "Backend",
-    skills: ["Node.js", "Express.js", "RESTful APIs", "Authentication (JWT)"],
+    category: "Backend Engineering",
+    description: "Designing robust RESTful APIs and secure server-side logic.",
+    skills: ["Node.js", "Express.js", "REST APIs", "JWT Authentication", "Role-Based Access Control"],
   },
   {
-    category: "Database",
-    skills: ["PostgreSQL", "Data Modeling", "Query Optimization"],
+    category: "Database Engineering",
+    description: "Architecting relational schemas and optimizing complex queries.",
+    skills: ["PostgreSQL", "Prisma ORM", "Data Modeling", "Query Optimization"],
   },
   {
-    category: "DevOps & Cloud",
-    skills: [
-      "Docker",
-      "Docker Compose",
-      "GitHub Actions (CI/CD)",
-      "Azure",
-      "Hetzner VPS",
-      "Linux Administration",
-    ],
+    category: "DevOps",
+    description: "Automating deployments and standardizing environments.",
+    skills: ["Docker", "Docker Compose", "GitHub Actions", "CI/CD Pipelines", "Nginx", "Linux"],
+  },
+  {
+    category: "Secure Development",
+    description: "Integrating static analysis and vulnerability scanning into the SDLC.",
+    skills: ["Trivy", "Semgrep", "OWASP ZAP", "ESLint", "SonarLint"],
   },
   {
     category: "Monitoring",
-    skills: ["Prometheus", "Grafana", "Uptime Kuma"],
+    description: "Ensuring high availability and observing production health.",
+    skills: ["Prometheus", "Grafana", "Uptime Kuma", "Loki", "Dozzle"],
   },
   {
-    category: "Security (DevSecOps)",
-    skills: [
-      "Semgrep",
-      "Trivy",
-      "GitLeaks",
-      "OWASP ZAP",
-      "Secure Coding Practices",
-    ],
+    category: "Enterprise Tools",
+    description: "Managing corporate IT environments and productivity suites.",
+    skills: ["Microsoft 365 Admin", "Active Directory", "ITIL Practices", "Vendor Management"],
+  },
+  {
+    category: "AI Productivity",
+    description: "Accelerating research, documentation, and prototyping.",
+    skills: ["ChatGPT", "Gemini", "GitHub Copilot", "Google Antigravity"],
+  },
+  {
+    category: "Cloud (Learning)",
+    description: "Expanding into scalable cloud infrastructure and orchestration.",
+    skills: ["AWS", "Azure", "Terraform", "Kubernetes"],
   },
 ];

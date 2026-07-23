@@ -8,15 +8,15 @@ export const Button = ({
   disabled = false,
 }) => {
   const baseStyle =
-    "inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2";
+    "inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2";
 
   const variants = {
-    primary: "bg-[#0a2342] text-white hover:bg-[#15345b] focus:ring-[#0a2342]",
+    primary: "bg-slate-900 text-white hover:bg-slate-800 focus:ring-slate-900 shadow-md hover:shadow-lg hover:-translate-y-0.5",
     secondary:
-      "bg-[#10b981] text-white hover:bg-[#059669] focus:ring-[#10b981]",
+      "bg-emerald-500 text-white hover:bg-emerald-600 focus:ring-emerald-500 shadow-md hover:shadow-lg hover:-translate-y-0.5",
     outline:
-      "border-2 border-[#0a2342] text-[#0a2342] hover:bg-gray-50 focus:ring-[#0a2342]",
-    text: "text-gray-600 hover:text-[#0a2342] px-0 py-0",
+      "border-2 border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50 focus:ring-slate-200",
+    text: "text-slate-600 hover:text-slate-900 px-0 py-0",
   };
 
   const classes = `${baseStyle} ${variants[variant]} ${className}`.trim();
