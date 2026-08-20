@@ -8,36 +8,59 @@ export const NAV_LINKS = [
   { id: "contact", label: "Contact" },
 ];
 
+/** Public status page (Uptime Kuma services dashboard). */
+export const UPTIME_STATUS_URL = "https://status.hemendrabasiya.com/status/services";
+
 export const APPLICATIONS_DATA = [
   {
     id: "portfolio-website",
     name: "Portfolio Website",
     description:
-      "The highly optimized, responsive personal portfolio you are currently viewing, built with modern frontend engineering practices.",
+      "The responsive personal portfolio you are currently viewing, built with React, Vite, and Tailwind CSS.",
     techStack: ["React", "Tailwind CSS", "Vite"],
     status: "Live",
     url: "https://hemendrabasiya.com",
     github: "https://github.com/hemendrabasiya/portfolio",
   },
   {
-    id: "auth-service",
-    name: "Authentication Service",
+    id: "hrms-access-control",
+    name: "Multi-Tenancy & Access Control",
     description:
-      "A centralized identity and access management service built with security-first DevSecOps principles.",
-    techStack: ["Node.js", "JWT", "Redis", "Docker"],
-    status: "Beta",
-    url: "https://auth.hemendrabasiya.com",
-    github: "https://github.com/hemendrabasiya/auth-service",
+      "Shared-database multi-tenancy with defense-in-depth isolation, catalog-driven RBAC, HQ-scoped authorization, and hybrid JWT + PostgreSQL sessions with rotating HttpOnly refresh tokens.",
+    techStack: ["PostgreSQL", "Prisma", "JWT", "RBAC", "Redis"],
+    status: "Live Demo",
+    url: "https://hrms.hemendrabasiya.com",
+    caseStudy: "/hrms-case-study",
   },
   {
-    id: "hrms-app",
-    name: "Human Resource Management System",
+    id: "hrms-platform",
+    name: "HRMS Domain Platform",
     description:
-      "A comprehensive HRMS platform designed to streamline employee management, leave tracking, payroll, and performance monitoring. Built with the PERN stack for scalability and maintainability.",
-    techStack: ["PostgreSQL", "Express.js", "React", "Node.js"],
-    status: "In Development",
+      "Production-deployed HR demonstration covering organization hierarchy, employees, leave, attendance, payroll runs, and async payslip PDF generation via BullMQ.",
+    techStack: ["PERN", "BullMQ", "Docker", "Zod"],
+    status: "Live Demo",
     url: "https://hrms.hemendrabasiya.com",
-    github: "https://github.com/hemendrabasiya/hrms",
+    caseStudy: "/hrms-case-study",
+  },
+  {
+    id: "hrms-tenant-routing",
+    name: "Wildcard Tenant Routing",
+    description:
+      "Subdomain-based tenant resolution (*.domain) with CORS allowlisting via APP_DOMAIN, so each tenant reaches its own workspace login without a separate deployment per customer.",
+    techStack: ["Nginx", "CORS", "React", "Express"],
+    status: "Live Demo",
+    url: "https://hrms.hemendrabasiya.com",
+    caseStudy: "/hrms-case-study",
+  },
+  {
+    id: "hrms-demo-ops",
+    name: "Demo Ops & Snapshot Restore",
+    description:
+      "Canonical demo snapshot tooling with pre-reset database and file backups, rollback on failure, post-restore verification, and scheduled demo-environment reset support.",
+    techStack: ["PostgreSQL", "Docker", "systemd", "Node.js"],
+    status: "Live Demo",
+    url: "https://hrms.hemendrabasiya.com",
+    caseStudy: "/hrms-case-study",
   },
 ];
 
@@ -81,21 +104,21 @@ export const JOURNEY_DATA = [
     year: "2025",
     title: "Enterprise HRMS",
     description:
-      "Architected and developed a comprehensive HRMS platform, applying enterprise patterns to solve complex authentication, RBAC, and data management challenges.",
+      "Architected and developed a multi-tenant HRMS platform with RBAC, HQ-scoped authorization, payroll, leave, and attendance—deployed as a live demonstration environment.",
     icon: "check",
   },
   {
     year: "2025",
     title: "DevOps",
     description:
-      "Embraced continuous integration and delivery. Implemented Docker and GitHub Actions to automate testing and deployments.",
+      "Embraced continuous delivery. Implemented Docker Compose and GitHub Actions to automate builds and deployments to a Hetzner VPS.",
     icon: "git-branch",
   },
   {
     year: "2026",
-    title: "Secure Software Delivery",
+    title: "Application Security & Operations",
     description:
-      "Integrated 'Shift-Left' security into my DevOps lifecycle using Trivy, Semgrep, and OWASP ZAP as quality checkpoints.",
+      "Strengthened application-level security controls—RBAC, tenant isolation, rate limiting, audit logging, environment fail-closed validation—and production uptime monitoring.",
     icon: "shield-check",
   },
   {
@@ -111,17 +134,17 @@ export const SKILLS_DATA = [
   {
     category: "Frontend Engineering",
     description: "Building responsive, accessible, and performant user interfaces.",
-    skills: ["React", "JavaScript (ES6+)", "Tailwind CSS", "Vite", "HTML5/CSS3"],
+    skills: ["React", "JavaScript (ES6+)", "TypeScript", "Tailwind CSS", "Vite", "HTML5/CSS3"],
   },
   {
     category: "Backend Engineering",
     description: "Designing robust RESTful APIs and secure server-side logic.",
-    skills: ["Node.js", "Express.js", "REST APIs", "JWT Authentication", "Role-Based Access Control"],
+    skills: ["Node.js", "Express.js", "REST APIs", "JWT Authentication", "Role-Based Access Control", "Zod Validation"],
   },
   {
     category: "Database Engineering",
     description: "Architecting relational schemas and optimizing complex queries.",
-    skills: ["PostgreSQL", "Prisma ORM", "Data Modeling", "Query Optimization"],
+    skills: ["PostgreSQL", "Prisma ORM", "Data Modeling", "Multi-tenancy", "Query Optimization"],
   },
   {
     category: "DevOps",
@@ -130,13 +153,13 @@ export const SKILLS_DATA = [
   },
   {
     category: "Secure Development",
-    description: "Integrating static analysis and vulnerability scanning into the SDLC.",
-    skills: ["Trivy", "Semgrep", "OWASP ZAP", "ESLint", "SonarLint"],
+    description: "Application-level security controls and defensive engineering practices.",
+    skills: ["RBAC", "Tenant Isolation", "Helmet", "Rate Limiting", "Audit Logging", "ESLint", "Zod"],
   },
   {
     category: "Monitoring",
-    description: "Ensuring high availability and observing production health.",
-    skills: ["Prometheus", "Grafana", "Uptime Kuma", "Loki", "Dozzle"],
+    description: "Observing production health and operational readiness.",
+    skills: ["Uptime Kuma", "Health Checks", "Structured Logging", "Request Tracing"],
   },
   {
     category: "Enterprise Tools",
@@ -144,9 +167,17 @@ export const SKILLS_DATA = [
     skills: ["Microsoft 365 Admin", "Active Directory", "ITIL Practices", "Vendor Management"],
   },
   {
-    category: "AI Productivity",
-    description: "Accelerating research, documentation, and prototyping.",
-    skills: ["ChatGPT", "Gemini", "GitHub Copilot", "Google Antigravity"],
+    category: "AI-Augmented Engineering",
+    description:
+      "Using AI as an engineering productivity tool across architecture, implementation, testing, debugging, and documentation—with human-led validation.",
+    skills: [
+      "Agentic Coding Workflows",
+      "AI-Assisted Architecture",
+      "AI-Assisted Implementation",
+      "AI-Assisted Testing",
+      "AI-Assisted Debugging",
+      "Human-in-the-Loop Review",
+    ],
   },
   {
     category: "Cloud (Learning)",

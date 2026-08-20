@@ -18,7 +18,7 @@ export const JourneyPage = () => (
   <div className="py-12 md:py-20 animate-fade-in">
     <SectionHeading
       title="Engineering Journey"
-      subtitle="How I evolved from Civil Engineering to Banking IT, and finally to Enterprise DevOps and Platform Engineering."
+      subtitle="How I evolved from Civil Engineering to Banking IT, full-stack engineering, and production operations."
     />
     <div className="relative mx-auto mt-16 max-w-4xl">
       <div className="absolute bottom-0 left-6 top-0 w-0.5 -translate-x-1/2 bg-slate-200 md:left-1/2 rounded-full"></div>
@@ -27,7 +27,7 @@ export const JourneyPage = () => (
         const Icon = iconMap[item.icon] || CheckCircle;
         return (
           <div
-            key={item.year}
+            key={`${item.year}-${item.title}`}
             className={`relative mb-16 flex items-center w-full animate-slide-up ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}
             style={{ animationDelay: `${index * 150}ms` }}
           >

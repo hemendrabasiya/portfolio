@@ -19,6 +19,7 @@ const getIconForCategory = (category) => {
     case "Enterprise Tools":
       return <Briefcase size={24} className="text-emerald-500" />;
     case "AI Productivity":
+    case "AI-Augmented Engineering":
       return <Bot size={24} className="text-emerald-500" />;
     case "Cloud (Learning)":
       return <Rocket size={24} className="text-emerald-500" />;

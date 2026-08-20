@@ -1,5 +1,5 @@
-import { useNavigate, Link } from "react-router-dom";
-import { ChevronRight, ShieldCheck, Server, Database, GitBranch } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ChevronRight, Server, Database, GitBranch } from "lucide-react";
 import { Button } from "../components/ui/Button";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { APPLICATIONS_DATA } from "../utils/portfolioData";
@@ -8,20 +8,20 @@ import { AppCard } from "../components/ui/AppCard";
 const highlightMetrics = [
   { label: "Banking Experience", value: "10+ Years", icon: Database },
   { label: "Enterprise IT", value: "3+ Years", icon: Server },
-  { label: "Focus", value: "DevOps & Secure Delivery", icon: GitBranch },
+  { label: "Focus", value: "Full-Stack & Production Eng.", icon: GitBranch },
 ];
 
 const previewCards = [
   {
     title: "Engineering Workflow",
     description:
-      "Explore my end-to-end SDLC process, architecture patterns, and integrated DevSecOps pipelines.",
+      "Explore my end-to-end SDLC process, architecture patterns, AI-augmented delivery, and production operations.",
     target: "/engineering",
   },
   {
     title: "Enterprise HRMS",
     description:
-      "A deep dive into building a secure, scalable Human Resource Management System using the PERN stack.",
+      "A live multi-tenant HRMS demo—RBAC, payroll, leave, attendance—deployed on Hetzner with the PERN stack.",
     target: "/hrms-case-study",
   },
   {
@@ -51,7 +51,7 @@ export const HomePage = () => {
             </h1>
             
             <p className="mb-10 text-xl md:text-2xl text-slate-600 leading-relaxed max-w-3xl">
-              Bridging 10+ years of Banking IT operations with modern Full-Stack (PERN) development to build production-ready, maintainable, secure, and scalable business applications.
+              Bridging 10+ years of Banking IT operations with modern full-stack (PERN) development and AI-augmented engineering workflows to build maintainable, secure, production-deployed business applications.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row mb-16">
@@ -110,9 +110,9 @@ export const HomePage = () => {
       <section className="mt-8 rounded-[2rem] border border-slate-200/60 glass bg-white/50 p-8 md:p-12 mb-20 animate-slide-up" style={{ animationDelay: "300ms" }}>
         <SectionHeading
           title="Featured Work"
-          subtitle="Recent applications demonstrating secure architecture and robust full-stack capabilities."
+          subtitle="Portfolio site plus verified HRMS capability areas—multi-tenancy, domain modules, tenant routing, and demo operations."
         />
-        <div className="grid gap-8 lg:grid-cols-3 mt-10">
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3 mt-10">
           {APPLICATIONS_DATA.slice(0, 3).map((app) => (
             <AppCard key={app.id} app={app} />
           ))}
@@ -120,7 +120,7 @@ export const HomePage = () => {
         <div className="mt-12 flex justify-center">
           <Link to="/applications">
             <Button variant="outline" className="group h-12 px-8 border-slate-300">
-              View All Applications
+              View All Work
               <ChevronRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
             </Button>
           </Link>

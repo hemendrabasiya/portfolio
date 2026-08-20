@@ -10,8 +10,8 @@ export const Footer = () => (
             HB<span className="text-emerald-500">.</span>
           </span>
           <p className="max-w-sm text-slate-400 leading-relaxed">
-            Hemendra Basiya — Software Developer & DevOps/DevSecOps Enthusiast
-            building scalable and secure digital infrastructure.
+            Hemendra Basiya — Enterprise Full-Stack Engineer building secure,
+            production-deployed business applications with AI-augmented workflows.
           </p>
         </div>
 

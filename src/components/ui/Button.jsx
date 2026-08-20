@@ -22,11 +22,13 @@ export const Button = ({
   const classes = `${baseStyle} ${variants[variant]} ${className}`.trim();
 
   if (href) {
+    const isMailOrTel = href.startsWith("mailto:") || href.startsWith("tel:");
     return (
       <a
         href={href}
-        target="_blank"
-        rel="noopener noreferrer"
+        {...(isMailOrTel
+          ? {}
+          : { target: "_blank", rel: "noopener noreferrer" })}
         className={classes}
       >
         {children}

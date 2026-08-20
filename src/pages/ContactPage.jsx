@@ -1,23 +1,19 @@
-import { useState } from "react";
-import { Briefcase, CheckCircle, Mail, MapPin } from "lucide-react";
+import { Briefcase, Mail, MapPin, Send } from "lucide-react";
 import { Button } from "../components/ui/Button";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { GithubIcon, LinkedinIcon } from "../components/icons/SocialIcons";
 
+const CONTACT_EMAIL = "hemendra.basia@gmail.com";
+const MAILTO_HREF = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+  "Portfolio inquiry — Hemendra Basiya",
+)}`;
+
 export const ContactPage = () => {
-  const [formStatus, setFormStatus] = useState("idle");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setFormStatus("submitting");
-    setTimeout(() => setFormStatus("success"), 1000);
-  };
-
   return (
     <div className="py-12 md:py-20 animate-fade-in">
       <SectionHeading
         title="Get in Touch"
-        subtitle="I am currently open to new opportunities, especially roles based in fintech. Feel free to reach out."
+        subtitle="I am currently open to new opportunities, especially roles in fintech and enterprise tech. Reach out directly by email."
       />
       <div className="mt-12 grid gap-12 md:grid-cols-2">
         <div>
@@ -29,10 +25,10 @@ export const ContactPage = () => {
               <div>
                 <h4 className="text-lg font-bold text-slate-900 font-heading">Email</h4>
                 <a
-                  href="mailto:hemendra.basia@gmail.com"
+                  href={MAILTO_HREF}
                   className="text-slate-600 transition-colors hover:text-emerald-600 font-medium"
                 >
-                  hemendra.basia@gmail.com
+                  {CONTACT_EMAIL}
                 </a>
               </div>
             </div>
@@ -71,6 +67,7 @@ export const ContactPage = () => {
                 href="https://github.com/hemendrabasiya"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub profile"
                 className="rounded-xl border border-slate-200 bg-white p-4 text-slate-600 shadow-sm transition-all hover:-translate-y-1 hover:border-slate-300 hover:text-slate-900 hover:shadow-md"
               >
                 <GithubIcon size={24} />
@@ -79,6 +76,7 @@ export const ContactPage = () => {
                 href="https://www.linkedin.com/in/hemendra-basiya-acbi-221793168"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn profile"
                 className="rounded-xl border border-slate-200 bg-white p-4 text-slate-600 shadow-sm transition-all hover:-translate-y-1 hover:border-blue-500 hover:text-blue-600 hover:shadow-md"
               >
                 <LinkedinIcon size={24} />
@@ -87,72 +85,26 @@ export const ContactPage = () => {
           </div>
         </div>
 
-        <div className="rounded-3xl border border-slate-200/60 glass bg-white/70 p-8 md:p-10 shadow-sm">
-          <h3 className="mb-8 text-2xl font-bold text-slate-900 font-heading">
-            Send a Message
+        <div className="rounded-3xl border border-slate-200/60 glass bg-white/70 p-8 md:p-10 shadow-sm flex flex-col justify-center">
+          <h3 className="mb-4 text-2xl font-bold text-slate-900 font-heading">
+            Email Me Directly
           </h3>
-          {formStatus === "success" ? (
-            <div className="flex items-center rounded-xl border border-emerald-200 bg-emerald-50 p-6 text-emerald-800 shadow-inner">
-              <CheckCircle className="mr-3 text-emerald-500" size={24} />
-              <span className="font-medium">Thank you! Your message has been sent successfully.</span>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="mb-2 block text-sm font-semibold text-slate-700"
-                >
-                  Name
-                </label>
-                <input
-                  required
-                  type="text"
-                  id="name"
-                  className="w-full rounded-xl border border-slate-300 bg-white/80 px-4 py-3 outline-none transition-all focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 placeholder:text-slate-400 shadow-sm"
-                  placeholder="John Doe"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="email"
-                  className="mb-2 block text-sm font-semibold text-slate-700"
-                >
-                  Email
-                </label>
-                <input
-                  required
-                  type="email"
-                  id="email"
-                  className="w-full rounded-xl border border-slate-300 bg-white/80 px-4 py-3 outline-none transition-all focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 placeholder:text-slate-400 shadow-sm"
-                  placeholder="john@example.com"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="message"
-                  className="mb-2 block text-sm font-semibold text-slate-700"
-                >
-                  Message
-                </label>
-                <textarea
-                  required
-                  id="message"
-                  rows="4"
-                  className="w-full resize-none rounded-xl border border-slate-300 bg-white/80 px-4 py-3 outline-none transition-all focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 placeholder:text-slate-400 shadow-sm"
-                  placeholder="How can we work together?"
-                ></textarea>
-              </div>
-              <Button
-                type="submit"
-                variant="primary"
-                className="flex w-full justify-center py-4 text-base"
-                disabled={formStatus === "submitting"}
-              >
-                {formStatus === "submitting" ? "Sending..." : "Send Message"}
-              </Button>
-            </form>
-          )}
+          <p className="text-slate-600 leading-relaxed mb-8">
+            Prefer a quick start? Open your email client with a pre-filled subject line. I
+            read every message and typically reply within a few business days.
+          </p>
+          <Button
+            href={MAILTO_HREF}
+            variant="primary"
+            className="flex w-full justify-center py-4 text-base"
+          >
+            <Send size={18} className="mr-2" />
+            Compose Email
+          </Button>
+          <p className="mt-6 text-sm text-slate-500 text-center">
+            Or copy:{" "}
+            <span className="font-medium text-slate-700">{CONTACT_EMAIL}</span>
+          </p>
         </div>
       </div>
     </div>
