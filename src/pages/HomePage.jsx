@@ -43,7 +43,7 @@ export const HomePage = () => {
           <div className="relative z-10">
             <div className="mb-4 inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-4 py-1.5 text-sm font-semibold text-emerald-700">
               <span className="mr-2 flex h-2 w-2 rounded-full bg-emerald-500"></span>
-              Available for Full-Time Roles
+              Available for Remote Roles
             </div>
             
             <h1 className="mb-6 text-5xl font-extrabold leading-tight tracking-tight text-slate-900 md:text-7xl font-heading">
