@@ -67,32 +67,44 @@ const evidenceRows = [
   { claim: "Package + app unit tests", status: "Verified locally", detail: "41 tests / 11 files (Vitest)" },
   { claim: "Tenant adversarial suite", status: "Verified locally", detail: "7/8 blocked; RLS needs non-superuser" },
   { claim: "Ops Console Playwright authz", status: "Verified locally", detail: "2/2 passed" },
-  { claim: "Java Maven + Testcontainers", status: "Verified via Docker", detail: "mvn test BUILD SUCCESS" },
+  { claim: "Java Maven + Testcontainers", status: "Local / architecture", detail: "Not on public edge (open demo-token risk)" },
   { claim: "Services Lab GitHub Actions", status: "Workflows present", detail: "Remote / CI run pending" },
-  { claim: "Public lab hostnames", status: "Not deployed", detail: "Case study + local Compose only" },
+  { claim: "Public Ops Console demo", status: "Public demo", detail: "https://hemendrabasiya.com/lab" },
 ];
 
 export const ServicesLabCaseStudyPage = () => {
   return (
     <div className="py-12 md:py-20 animate-fade-in max-w-4xl mx-auto">
       <SectionHeading
-        title="Services Lab Case Study"
-        subtitle="An engineering laboratory for secure enterprise architecture, reusable backend infrastructure, DevSecOps, and cross-stack delivery—not a second HRMS."
+        title="Services Lab"
+        subtitle="A public engineering laboratory demonstrating reusable enterprise security, multi-tenancy, authorization, auditability, session security, API protection, observability, Next.js architecture and Java/Spring transaction processing."
       />
 
-      <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50/80 p-5 flex gap-3">
-        <AlertTriangle className="text-amber-600 flex-shrink-0 mt-0.5" size={22} />
-        <p className="text-sm text-amber-950 leading-relaxed">
-          <strong>Honest status:</strong> implemented and verified locally (Compose / Maven /
-          Vitest / Playwright). This page is a <strong>Case Study + reproducible local demo</strong>.
-          Public demo URLs are not claimed until a verified deployment exists. HRMS remains the
-          primary public live product demo.
+      <div className="mt-8 rounded-2xl border border-emerald-200 bg-emerald-50/80 p-5 flex gap-3">
+        <CheckCircle2 className="text-emerald-600 flex-shrink-0 mt-0.5" size={22} />
+        <p className="text-sm text-emerald-950 leading-relaxed">
+          <strong>Public demo:</strong> authenticated Next.js Ops Console at{" "}
+          <a
+            href="https://hemendrabasiya.com/lab"
+            className="font-semibold underline underline-offset-2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            hemendrabasiya.com/lab
+          </a>
+          . Reference API and databases stay on a private Docker network. Java Transaction API
+          remains a local/architecture demo (not published on the public edge).
         </p>
       </div>
 
       <div className="mt-8 flex flex-wrap gap-4">
-        <Link to="/applications">
+        <a href="https://hemendrabasiya.com/lab" target="_blank" rel="noopener noreferrer">
           <Button variant="primary" className="h-12 px-6">
+            Open Public Demo
+          </Button>
+        </a>
+        <Link to="/applications">
+          <Button variant="outline" className="h-12 px-6 bg-white/50">
             View on Work
           </Button>
         </Link>
@@ -101,6 +113,11 @@ export const ServicesLabCaseStudyPage = () => {
             Engineering & CI tiers
           </Button>
         </Link>
+      </div>
+
+      <div className="mt-6 rounded-xl border border-slate-200 bg-white p-4 text-sm text-slate-700">
+        <strong>Demo login (viewer):</strong> <code>viewer</code> /{" "}
+        <code>LabView-2026-Demo!</code>
       </div>
 
       <div className="mt-12 rounded-3xl border border-slate-200 bg-white p-8 md:p-12 shadow-sm">

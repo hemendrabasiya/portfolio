@@ -36,12 +36,13 @@ export const APPLICATIONS_DATA = [
   },
   {
     id: "services-lab",
-    name: "TypeScript Services Lab",
+    name: "TypeScript Services Lab — Public Demo",
     description:
-      "Engineering lab for reusable enterprise platform patterns—tenant isolation, policy/SoD, hash-chain audit, session reuse, API idempotency—plus Next.js Ops Console and Spring Transaction API. Capabilities stay inside one lab, not seven separate projects.",
+      "A public engineering laboratory demonstrating reusable enterprise security, multi-tenancy, authorization, auditability, session security, API protection, observability, Next.js architecture, and Java/Spring transaction processing—one coherent lab, not separate commercial products.",
     techStack: ["TypeScript", "Next.js", "Spring Boot", "PostgreSQL", "Docker"],
-    badge: "CASE STUDY",
-    status: "Case Study",
+    badge: "PUBLIC DEMO",
+    status: "Public Demo",
+    url: "https://hemendrabasiya.com/lab",
     caseStudy: "/services-lab",
     // github omitted until a verified public remote exists
   },

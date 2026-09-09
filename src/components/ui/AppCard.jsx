@@ -7,17 +7,20 @@ export const AppCard = ({ app }) => {
   const hasGithub = Boolean(app.github);
   const hasCaseStudy = Boolean(app.caseStudy);
   const openLabel =
-    app.status === "Live Demo" || app.status === "Live Product"
-      ? "Live Demo"
-      : app.status === "Capability"
-        ? "Open Demo"
-        : app.status === "Case Study"
-          ? "Open"
-          : "Open";
+    app.status === "Public Demo"
+      ? "Public Demo"
+      : app.status === "Live Demo" || app.status === "Live Product"
+        ? "Live Demo"
+        : app.status === "Capability"
+          ? "Open Demo"
+          : app.status === "Case Study"
+            ? "Open"
+            : "Open";
   const isLiveStatus =
     app.status === "Live" ||
     app.status === "Live Demo" ||
-    app.status === "Live Product";
+    app.status === "Live Product" ||
+    app.status === "Public Demo";
   const isCapability = app.status === "Capability";
 
   return (
