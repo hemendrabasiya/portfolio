@@ -23,22 +23,35 @@ export const APPLICATIONS_DATA = [
     github: "https://github.com/hemendrabasiya/portfolio",
   },
   {
+    id: "hrms-platform",
+    name: "HRMS Platform",
+    description:
+      "Flagship multi-tenant HR demonstration—organization, employees, leave, attendance, payroll—with public live demo, case study, and GitHub source. Risk-based CI tiers and Docker Compose ops on Hetzner.",
+    techStack: ["PERN", "Prisma", "BullMQ", "Docker", "GitHub Actions"],
+    badge: "FLAGSHIP",
+    status: "Live Demo",
+    url: "https://hrms.hemendrabasiya.com",
+    caseStudy: "/hrms-case-study",
+    github: "https://github.com/hemendrabasiya/hrms",
+  },
+  {
+    id: "services-lab",
+    name: "TypeScript Services Lab",
+    description:
+      "Engineering lab for reusable enterprise platform patterns—tenant isolation, policy/SoD, hash-chain audit, session reuse, API idempotency—plus Next.js Ops Console and Spring Transaction API. Capabilities stay inside one lab, not seven separate projects.",
+    techStack: ["TypeScript", "Next.js", "Spring Boot", "PostgreSQL", "Docker"],
+    badge: "CASE STUDY",
+    status: "Case Study",
+    caseStudy: "/services-lab",
+    // github omitted until a verified public remote exists
+  },
+  {
     id: "hrms-access-control",
     name: "Multi-Tenancy & Access Control",
     description:
       "Shared-database multi-tenancy with defense-in-depth isolation, catalog-driven RBAC, HQ-scoped authorization, and hybrid JWT + PostgreSQL sessions with rotating HttpOnly refresh tokens.",
     techStack: ["PostgreSQL", "Prisma", "JWT", "RBAC", "Redis"],
-    status: "Live Demo",
-    url: "https://hrms.hemendrabasiya.com",
-    caseStudy: "/hrms-case-study",
-  },
-  {
-    id: "hrms-platform",
-    name: "HRMS Domain Platform",
-    description:
-      "Production-deployed HR demonstration covering organization hierarchy, employees, leave, attendance, payroll runs, and async payslip PDF generation via BullMQ.",
-    techStack: ["PERN", "BullMQ", "Docker", "Zod"],
-    status: "Live Demo",
+    status: "Capability",
     url: "https://hrms.hemendrabasiya.com",
     caseStudy: "/hrms-case-study",
   },
@@ -48,7 +61,7 @@ export const APPLICATIONS_DATA = [
     description:
       "Subdomain-based tenant resolution (*.domain) with CORS allowlisting via APP_DOMAIN, so each tenant reaches its own workspace login without a separate deployment per customer.",
     techStack: ["Nginx", "CORS", "React", "Express"],
-    status: "Live Demo",
+    status: "Capability",
     url: "https://hrms.hemendrabasiya.com",
     caseStudy: "/hrms-case-study",
   },
@@ -58,9 +71,37 @@ export const APPLICATIONS_DATA = [
     description:
       "Canonical demo snapshot tooling with pre-reset database and file backups, rollback on failure, post-restore verification, and scheduled demo-environment reset support.",
     techStack: ["PostgreSQL", "Docker", "systemd", "Node.js"],
-    status: "Live Demo",
+    status: "Capability",
     url: "https://hrms.hemendrabasiya.com",
     caseStudy: "/hrms-case-study",
+  },
+];
+
+/** Risk-based CI tiers — portfolio copy must not claim “full suite on every PR”. */
+export const CI_TIERS_DATA = [
+  {
+    id: "tier-0",
+    name: "Tier 0 — Local",
+    truth: "Fast feedback while coding",
+    runs: "lint, typecheck, affected unit / verify:fast",
+  },
+  {
+    id: "tier-1",
+    name: "Tier 1 — PR gate",
+    truth: "Merge blocker, not the entire test universe",
+    runs: "lint ∥ typecheck ∥ critical auth/tenancy/authz smoke ∥ build",
+  },
+  {
+    id: "tier-2",
+    name: "Tier 2 — Main / release",
+    truth: "Promotion confidence before deploy",
+    runs: "broader suites, image publish/scan where configured",
+  },
+  {
+    id: "tier-3",
+    name: "Tier 3 — Nightly / deep",
+    truth: "Depth without blocking every PR",
+    runs: "slow/full suites, optional scanners",
   },
 ];
 
@@ -90,7 +131,7 @@ export const JOURNEY_DATA = [
     year: "2022",
     title: "Enterprise Infrastructure",
     description:
-      "Managed core networks, Microsoft 365, vendor relationships, and ensured zero downtime for branch operations.",
+      "Managed core networks, Microsoft 365, and vendor relationships with a focus on high availability for branch operations.",
     icon: "server",
   },
   {
@@ -111,7 +152,7 @@ export const JOURNEY_DATA = [
     year: "2025",
     title: "DevOps",
     description:
-      "Embraced continuous delivery. Implemented Docker Compose and GitHub Actions to automate builds and deployments to a Hetzner VPS.",
+      "Embraced continuous delivery. Implemented Docker Compose, GitHub Actions (risk-based CI tiers), GHCR image publish, and VPS deploy workflows for the HRMS live demo.",
     icon: "git-branch",
   },
   {
@@ -120,6 +161,13 @@ export const JOURNEY_DATA = [
     description:
       "Strengthened application-level security controls—RBAC, tenant isolation, rate limiting, audit logging, environment fail-closed validation—and production uptime monitoring.",
     icon: "shield-check",
+  },
+  {
+    year: "2026",
+    title: "Services Lab & Cross-Stack Exploration",
+    description:
+      "Built a TypeScript Services Lab (tenant-guard, policy, audit ledger, session/api-guard), a Next.js Ops Console BFF, and a Java/Spring Secure Transaction API—with risk-based CI tiers and a DevSecOps maturity ladder.",
+    icon: "code",
   },
   {
     year: "Future",
@@ -134,32 +182,32 @@ export const SKILLS_DATA = [
   {
     category: "Frontend Engineering",
     description: "Building responsive, accessible, and performant user interfaces.",
-    skills: ["React", "JavaScript (ES6+)", "TypeScript", "Tailwind CSS", "Vite", "HTML5/CSS3"],
+    skills: ["React", "JavaScript (ES6+)", "TypeScript", "Next.js", "Tailwind CSS", "Vite", "HTML5/CSS3"],
   },
   {
     category: "Backend Engineering",
     description: "Designing robust RESTful APIs and secure server-side logic.",
-    skills: ["Node.js", "Express.js", "REST APIs", "JWT Authentication", "Role-Based Access Control", "Zod Validation"],
+    skills: ["Node.js", "Express.js", "REST APIs", "JWT Authentication", "Role-Based Access Control", "Zod Validation", "Spring Boot", "Java 21"],
   },
   {
     category: "Database Engineering",
     description: "Architecting relational schemas and optimizing complex queries.",
-    skills: ["PostgreSQL", "Prisma ORM", "Data Modeling", "Multi-tenancy", "Query Optimization"],
+    skills: ["PostgreSQL", "Prisma ORM", "Data Modeling", "Multi-tenancy", "Query Optimization", "Flyway", "Row-Level Security"],
   },
   {
     category: "DevOps",
     description: "Automating deployments and standardizing environments.",
-    skills: ["Docker", "Docker Compose", "GitHub Actions", "CI/CD Pipelines", "Nginx", "Linux"],
+    skills: ["Docker", "Docker Compose", "GitHub Actions", "CI/CD Pipelines", "Nginx", "Linux", "GHCR", "Trivy", "SBOM"],
   },
   {
     category: "Secure Development",
     description: "Application-level security controls and defensive engineering practices.",
-    skills: ["RBAC", "Tenant Isolation", "Helmet", "Rate Limiting", "Audit Logging", "ESLint", "Zod"],
+    skills: ["RBAC", "Tenant Isolation", "Helmet", "Rate Limiting", "Audit Logging", "ESLint", "Zod", "Idempotency", "Refresh Reuse Detection"],
   },
   {
     category: "Monitoring",
     description: "Observing production health and operational readiness.",
-    skills: ["Uptime Kuma", "Health Checks", "Structured Logging", "Request Tracing"],
+    skills: ["Uptime Kuma", "Health Checks", "Structured Logging", "Request Tracing", "Prometheus", "Actuator"],
   },
   {
     category: "Enterprise Tools",

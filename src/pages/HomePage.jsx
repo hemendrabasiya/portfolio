@@ -6,8 +6,8 @@ import { APPLICATIONS_DATA } from "../utils/portfolioData";
 import { AppCard } from "../components/ui/AppCard";
 
 const highlightMetrics = [
-  { label: "Banking Experience", value: "10+ Years", icon: Database },
-  { label: "Enterprise IT", value: "3+ Years", icon: Server },
+  { label: "Banking Domain", value: "10+ Years", icon: Database },
+  { label: "Enterprise IT Ops", value: "3+ Years", icon: Server },
   { label: "Focus", value: "Full-Stack & Production Eng.", icon: GitBranch },
 ];
 
@@ -51,7 +51,8 @@ export const HomePage = () => {
             </h1>
             
             <p className="mb-10 text-xl md:text-2xl text-slate-600 leading-relaxed max-w-3xl">
-              Bridging 10+ years of Banking IT operations with modern full-stack (PERN) development and AI-augmented engineering workflows to build maintainable, secure, production-deployed business applications.
+              Banking-domain engineer building secure multi-tenant systems with modern full-stack (PERN) development,
+              reusable platform components, and AI-augmented delivery—grounded in production operations experience.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row mb-16">
@@ -110,7 +111,7 @@ export const HomePage = () => {
       <section className="mt-8 rounded-[2rem] border border-slate-200/60 glass bg-white/50 p-8 md:p-12 mb-20 animate-slide-up" style={{ animationDelay: "300ms" }}>
         <SectionHeading
           title="Featured Work"
-          subtitle="Portfolio site plus verified HRMS capability areas—multi-tenancy, domain modules, tenant routing, and demo operations."
+          subtitle="Portfolio site, Services Lab platform engineering, and verified HRMS capability areas."
         />
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3 mt-10">
           {APPLICATIONS_DATA.slice(0, 3).map((app) => (

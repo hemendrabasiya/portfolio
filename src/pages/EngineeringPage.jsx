@@ -1,5 +1,5 @@
 import { SectionHeading } from "../components/ui/SectionHeading";
-import { UPTIME_STATUS_URL } from "../utils/portfolioData";
+import { CI_TIERS_DATA, UPTIME_STATUS_URL } from "../utils/portfolioData";
 import {
   GitPullRequest,
   Code,
@@ -68,10 +68,10 @@ const workflowSteps = [
     title: "Docker",
     desc: "Packaging applications with Docker Compose for environment consistency.",
   },
-  {
+    {
     icon: GitPullRequest,
-    title: "CI/CD",
-    desc: "GitHub Actions automating build validation and deployment to a Hetzner VPS.",
+    title: "CI/CD (tiered)",
+    desc: "GitHub Actions with risk-based tiers—PR gates stay fast; deeper suites and image scans run on main/nightly. Badges must match what actually runs.",
   },
   {
     icon: ServerCog,
@@ -285,6 +285,31 @@ export const EngineeringPage = () => {
         </div>
       </div>
 
+      <div className="mb-24">
+        <h3 className="mb-4 text-3xl font-bold text-slate-900 font-heading text-center">
+          Risk-based CI tiers
+        </h3>
+        <p className="mb-10 text-center text-slate-600 max-w-2xl mx-auto leading-relaxed">
+          CI badges and recruiter copy should reflect <strong>what actually runs</strong>—not
+          imply a full-suite gate on every pull request. HRMS and the Services Lab use explicit
+          tiers for speed vs confidence.
+        </p>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {CI_TIERS_DATA.map((tier) => (
+            <div
+              key={tier.id}
+              className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
+            >
+              <h4 className="font-bold text-slate-900 font-heading text-sm mb-1">
+                {tier.name}
+              </h4>
+              <p className="text-xs font-semibold text-emerald-700 mb-2">{tier.truth}</p>
+              <p className="text-sm text-slate-600 leading-relaxed">{tier.runs}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div className="mb-24 rounded-[2rem] border border-slate-200 bg-slate-900 text-white p-8 md:p-12 shadow-sm overflow-hidden relative">
         <div className="absolute top-0 right-0 p-8 opacity-10">
           <Bot size={120} />
@@ -374,8 +399,9 @@ export const EngineeringPage = () => {
               Request IDs and application logs for diagnosis.
             </li>
             <li className="flex items-start">
-              <span className="font-bold text-emerald-600 mr-2">Deploy pipeline:</span> Docker +
-              GitHub Actions to Hetzner.
+              <span className="font-bold text-emerald-600 mr-2">Deploy pipeline:</span> Docker
+              Compose on Hetzner via GitHub Actions. GHCR digest-pin path is implemented in repo;
+              production cutover still requires operator secrets + image publish verification.
             </li>
           </ul>
         </div>

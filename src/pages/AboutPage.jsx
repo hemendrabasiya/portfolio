@@ -43,7 +43,7 @@ export const AboutPage = () => (
         <p className="mb-8">
           My objective is to secure an{" "}
           <strong className="text-slate-900">
-            Enterprise Full-Stack / Software Engineer
+            Software Engineer / Full-Stack
           </strong>{" "}
           role in{" "}
           <strong className="text-slate-900">Fintech or Enterprise Tech</strong>, where

@@ -6,7 +6,7 @@ export const ApplicationsPage = () => (
   <div className="py-12 md:py-20 animate-fade-in">
     <SectionHeading
       title="Work"
-      subtitle="The portfolio site and capability areas from the production-deployed HRMS live demo—presented as platform modules, not separate microservices."
+      subtitle="Portfolio site, Services Lab platform packages (case study), and capability areas from the production-deployed HRMS live demo."
     />
     <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 mt-12">
       {APPLICATIONS_DATA.map((app, index) => (

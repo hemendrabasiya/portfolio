@@ -274,8 +274,10 @@ export const HrmsCaseStudyPage = () => {
             </li>
           </ul>
           <p className="mt-4 text-sm text-slate-500">
-            CI currently gates on successful builds. A comprehensive local Jest and Playwright
-            suite exists; re-enabling those suites as CI gates is planned.
+            Risk-based CI: Tier 1 gates lint, typecheck, critical auth/tenancy tests, and
+            builds. Tier 2 runs fuller suites and GHCR publish on main; selected Playwright
+            specs still run with soft-fail until consistently green. Local Jest and Playwright
+            suites exist beyond the merge gate.
           </p>
         </Section>
 

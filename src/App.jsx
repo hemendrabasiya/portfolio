@@ -11,6 +11,7 @@ import { SkillsPage } from "./pages/SkillsPage";
 import { ContactPage } from "./pages/ContactPage";
 import { EngineeringPage } from "./pages/EngineeringPage";
 import { HrmsCaseStudyPage } from "./pages/HrmsCaseStudyPage";
+import { ServicesLabCaseStudyPage } from "./pages/ServicesLabCaseStudyPage";
 
 const NotFound = () => (
   <div className="py-32 flex flex-col items-center justify-center animate-fade-in">
@@ -37,6 +38,7 @@ export default function PortfolioApp() {
           <Route path="/skills" element={<SkillsPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/hrms-case-study" element={<HrmsCaseStudyPage />} />
+          <Route path="/services-lab" element={<ServicesLabCaseStudyPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
