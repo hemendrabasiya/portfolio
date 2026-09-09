@@ -69,7 +69,7 @@ const evidenceRows = [
   { claim: "Ops Console Playwright authz", status: "Verified locally", detail: "2/2 passed" },
   { claim: "Java Maven + Testcontainers", status: "Local / architecture", detail: "Not on public edge (open demo-token risk)" },
   { claim: "Services Lab GitHub Actions", status: "Workflows present", detail: "Remote / CI run pending" },
-  { claim: "Public Ops Console demo", status: "Public demo", detail: "https://hemendrabasiya.com/lab" },
+  { claim: "Public Ops Console demo", status: "Public demo", detail: "https://labs.hemendrabasiya.com" },
 ];
 
 export const ServicesLabCaseStudyPage = () => {
@@ -85,12 +85,12 @@ export const ServicesLabCaseStudyPage = () => {
         <p className="text-sm text-emerald-950 leading-relaxed">
           <strong>Public demo:</strong> authenticated Next.js Ops Console at{" "}
           <a
-            href="https://hemendrabasiya.com/lab"
+            href="https://labs.hemendrabasiya.com"
             className="font-semibold underline underline-offset-2"
             target="_blank"
             rel="noopener noreferrer"
           >
-            hemendrabasiya.com/lab
+            labs.hemendrabasiya.com
           </a>
           . Reference API and databases stay on a private Docker network. Java Transaction API
           remains a local/architecture demo (not published on the public edge).
@@ -98,7 +98,7 @@ export const ServicesLabCaseStudyPage = () => {
       </div>
 
       <div className="mt-8 flex flex-wrap gap-4">
-        <a href="https://hemendrabasiya.com/lab" target="_blank" rel="noopener noreferrer">
+        <a href="https://labs.hemendrabasiya.com" target="_blank" rel="noopener noreferrer">
           <Button variant="primary" className="h-12 px-6">
             Open Public Demo
           </Button>

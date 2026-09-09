@@ -42,7 +42,7 @@ export const APPLICATIONS_DATA = [
     techStack: ["TypeScript", "Next.js", "Spring Boot", "PostgreSQL", "Docker"],
     badge: "PUBLIC DEMO",
     status: "Public Demo",
-    url: "https://hemendrabasiya.com/lab",
+    url: "https://labs.hemendrabasiya.com",
     caseStudy: "/services-lab",
     // github omitted until a verified public remote exists
   },
