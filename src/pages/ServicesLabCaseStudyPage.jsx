@@ -92,8 +92,18 @@ export const ServicesLabCaseStudyPage = () => {
           >
             labs.hemendrabasiya.com
           </a>
-          . Reference API and databases stay on a private Docker network. Java Transaction API
-          remains a local/architecture demo (not published on the public edge).
+          . Start at the homepage for what the app does, then{" "}
+          <a
+            href="https://labs.hemendrabasiya.com/login"
+            className="font-semibold underline underline-offset-2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            How to sign in
+          </a>{" "}
+          for the visitor guidebook. Reference API and databases stay on a private
+          Docker network. Java Transaction API remains a local/architecture demo
+          (not published on the public edge).
         </p>
       </div>
 
@@ -115,9 +125,23 @@ export const ServicesLabCaseStudyPage = () => {
         </Link>
       </div>
 
-      <div className="mt-6 rounded-xl border border-slate-200 bg-white p-4 text-sm text-slate-700">
-        <strong>Demo login (viewer):</strong> <code>viewer</code> /{" "}
-        <code>LabView-2026-Demo!</code>
+      <div className="mt-6 rounded-xl border border-slate-200 bg-white p-4 text-sm text-slate-700 space-y-2">
+        <p className="m-0">
+          <strong>How to try it:</strong> open{" "}
+          <a
+            href="https://labs.hemendrabasiya.com/login"
+            className="text-emerald-700 font-medium underline underline-offset-2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            labs.hemendrabasiya.com/login
+          </a>
+          , use the guidebook, or click <em>Fill demo credentials</em>.
+        </p>
+        <p className="m-0">
+          <strong>Demo login (viewer):</strong> <code>viewer</code> /{" "}
+          <code>LabView-2026-Demo!</code>
+        </p>
       </div>
 
       <div className="mt-12 rounded-3xl border border-slate-200 bg-white p-8 md:p-12 shadow-sm">
