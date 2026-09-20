@@ -64,12 +64,12 @@ const capabilities = [
 ];
 
 const evidenceRows = [
-  { claim: "Package + app unit tests", status: "Verified locally", detail: "41 tests / 11 files (Vitest)" },
-  { claim: "Tenant adversarial suite", status: "Verified locally", detail: "7/8 blocked; RLS needs non-superuser" },
-  { claim: "Ops Console Playwright authz", status: "Verified locally", detail: "2/2 passed" },
+  { claim: "Package + app unit tests", status: "Verified in CI / local", detail: "Vitest suites in services-lab monorepo" },
+  { claim: "Ops Console public demo", status: "Live", detail: "https://labs.hemendrabasiya.com (homepage + login guidebook)" },
+  { claim: "Viewer + operator RBAC", status: "Live", detail: "viewer: Health/Service · operator: +Isolation/Governance (no admin mutate)" },
+  { claim: "Reference API + DB/Redis", status: "Private network", detail: "Behind BFF only — not on the public edge" },
   { claim: "Java Maven + Testcontainers", status: "Local / architecture", detail: "Not on public edge (open demo-token risk)" },
-  { claim: "Services Lab GitHub Actions", status: "Workflows present", detail: "Remote / CI run pending" },
-  { claim: "Public Ops Console demo", status: "Public demo", detail: "https://labs.hemendrabasiya.com" },
+  { claim: "Services Lab GitHub Actions", status: "Configured", detail: "CI, GHCR publish/scan, digest deploy workflows on main" },
 ];
 
 export const ServicesLabCaseStudyPage = () => {
@@ -136,11 +136,16 @@ export const ServicesLabCaseStudyPage = () => {
           >
             labs.hemendrabasiya.com/login
           </a>
-          , use the guidebook, or click <em>Fill demo credentials</em>.
+          , then <em>Fill operator</em> (recommended) or <em>Fill viewer</em>.
         </p>
         <p className="m-0">
-          <strong>Demo login (viewer):</strong> <code>viewer</code> /{" "}
-          <code>LabView-2026-Demo!</code>
+          <strong>Viewer:</strong> <code>viewer</code> /{" "}
+          <code>LabView-2026-Demo!</code> — Health + Service
+        </p>
+        <p className="m-0">
+          <strong>Operator:</strong> <code>operator</code> /{" "}
+          <code>LabOps-2026-Demo!</code> — + Isolation + Governance (no admin
+          mutate)
         </p>
       </div>
 
