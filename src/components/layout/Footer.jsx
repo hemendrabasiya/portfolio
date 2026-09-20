@@ -1,5 +1,6 @@
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, FileText } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../icons/SocialIcons";
+import { PROFILE } from "../../utils/portfolioData";
 
 export const Footer = () => (
   <footer className="border-t border-slate-800 bg-slate-900 py-16 text-slate-400">
@@ -10,8 +11,9 @@ export const Footer = () => (
             HB<span className="text-emerald-500">.</span>
           </span>
           <p className="max-w-sm text-slate-400 leading-relaxed">
-            Hemendra Basiya — Software engineer building secure, multi-tenant
-            systems with a banking-domain and production-ops background.
+            {PROFILE.name} — Full-Stack Developer &amp; Banking IT Professional
+            (FinTech), combining software engineering with banking and digital payment
+            domain experience.
           </p>
         </div>
 
@@ -22,7 +24,7 @@ export const Footer = () => (
           <ul className="space-y-4 text-slate-400">
             <li>
               <a
-                href="https://github.com/hemendrabasiya"
+                href={PROFILE.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center w-fit transition-colors hover:text-emerald-400"
@@ -32,7 +34,7 @@ export const Footer = () => (
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/in/hemendra-basiya-acbi-221793168"
+                href={PROFILE.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center w-fit transition-colors hover:text-emerald-400"
@@ -42,10 +44,20 @@ export const Footer = () => (
             </li>
             <li>
               <a
-                href="mailto:hemendra.basia@gmail.com"
+                href={`mailto:${PROFILE.email}`}
                 className="flex items-center w-fit transition-colors hover:text-emerald-400"
               >
                 <Mail size={18} className="mr-3" /> Email
+              </a>
+            </li>
+            <li>
+              <a
+                href={PROFILE.resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center w-fit transition-colors hover:text-emerald-400"
+              >
+                <FileText size={18} className="mr-3" /> Resume (PDF)
               </a>
             </li>
           </ul>
@@ -56,16 +68,14 @@ export const Footer = () => (
             Location
           </h4>
           <p className="flex items-center text-slate-400">
-            <MapPin size={18} className="mr-3 text-emerald-500" /> Vadodara,
-            Gujarat, India
+            <MapPin size={18} className="mr-3 text-emerald-500" /> {PROFILE.location}
           </p>
         </div>
       </div>
 
       <div className="mt-16 flex flex-col md:flex-row items-center justify-between border-t border-slate-800 pt-8 text-sm text-slate-500">
         <p>
-          &copy; {new Date().getFullYear()} Hemendra Basiya. All rights
-          reserved.
+          &copy; {new Date().getFullYear()} {PROFILE.name}. All rights reserved.
         </p>
       </div>
     </div>

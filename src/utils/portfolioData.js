@@ -1,34 +1,168 @@
+export const PROFILE = {
+  name: "Hemendra Basiya",
+  title: "Full-Stack Developer & Banking IT Professional (FinTech)",
+  shortTitle: "Full-Stack Developer",
+  email: "hemendra.basia@gmail.com",
+  phone: "+91 9429471070",
+  location: "Vadodara, Gujarat, India",
+  website: "https://hemendrabasiya.com",
+  github: "https://github.com/hemendrabasiya",
+  linkedin: "https://www.linkedin.com/in/hemendra-basiya-acbi-221793168",
+  resumeUrl: "/Hemendra-Resume.pdf",
+  summary:
+    "Full-Stack Developer and Banking IT Professional with 4+ years of professional software development experience and 9+ years of banking-sector experience. Builds web applications with TypeScript, React, Node.js and PostgreSQL, with practical experience in Docker, DevSecOps, CI/CD and AI-assisted development.",
+};
+
 export const NAV_LINKS = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
-  { id: "engineering", label: "Engineering" },
+  { id: "experience", label: "Experience" },
   { id: "applications", label: "Work" },
-  { id: "journey", label: "Journey" },
   { id: "skills", label: "Skills" },
+  { id: "engineering", label: "Engineering" },
   { id: "contact", label: "Contact" },
 ];
 
 /** Public status page (Uptime Kuma services dashboard). */
 export const UPTIME_STATUS_URL = "https://status.hemendrabasiya.com/status/services";
 
-export const APPLICATIONS_DATA = [
+export const EXPERIENCE_DATA = [
   {
-    id: "portfolio-website",
-    name: "Portfolio Website",
-    description:
-      "The responsive personal portfolio you are currently viewing, built with React, Vite, and Tailwind CSS.",
-    techStack: ["React", "Tailwind CSS", "Vite"],
-    status: "Live",
-    url: "https://hemendrabasiya.com",
-    github: "https://github.com/hemendrabasiya/portfolio",
+    id: "digital-banking",
+    role: "Digital Banking & Cyber Cell Operations",
+    employer: "Gujarat Gramin Bank",
+    location: "Vadodara, India",
+    period: "June 2026 – Present",
+    type: "employment",
+    highlights: [
+      "Monitor and support digital payment and settlement operations across UPI, IMPS, NEFT and RTGS, including transaction exceptions, reconciliation and issue resolution.",
+      "Coordinate with technology, operations and external payment-system stakeholders on transaction processing, service availability and operational incidents.",
+      "Support cyber-fraud monitoring and incident investigation, including transaction analysis, case reporting and coordination of preventive and corrective actions.",
+      "Analyse transaction-related incidents and support implementation of security and operational controls.",
+    ],
   },
   {
-    id: "hrms-platform",
-    name: "HRMS Platform",
+    id: "full-stack",
+    role: "Full Stack Developer",
+    employer: "Gujarat Gramin Bank",
+    location: "Rajkot, India",
+    period: "August 2022 – June 2026",
+    type: "employment",
+    highlights: [
+      "Developed and maintained internal web-based business applications using React.js, TypeScript, Node.js, Express.js and PostgreSQL.",
+      "Built REST APIs and frontend modules for business workflows, data management and operational processes.",
+      "Implemented authentication, authorisation, role-based access control and session management.",
+      "Worked on database design, API integration, debugging, performance improvements and resolution of application issues.",
+    ],
+  },
+  {
+    id: "office-assistant",
+    role: "Office Assistant (Multipurpose)",
+    employer: "Gujarat Gramin Bank",
+    location: "Rajkot, India",
+    period: "March 2017 – August 2022",
+    type: "employment",
+    highlights: [
+      "Managed branch banking operations, cash handling and high-volume customer transactions with a focus on accuracy and operational controls.",
+      "Developed practical understanding of financial transaction workflows, customer operations and banking processes, supporting a later transition into software and digital banking.",
+    ],
+  },
+];
+
+export const EDUCATION_DATA = [
+  {
+    id: "btech",
+    degree: "Bachelor of Technology (B.Tech.) — Civil Engineering",
+    institution: "Pacific University",
+    location: "Udaipur, Rajasthan, India",
+    period: "2010 – 2014",
+  },
+];
+
+export const CERTIFICATIONS_DATA = [
+  {
+    id: "acbi",
+    name: "Associate Chartered Banker (ACBI)",
+    issuer: "Chartered Banker Institute",
+    date: "February 2025",
+  },
+  {
+    id: "digital-banking",
+    name: "Certificate in Digital Banking",
+    issuer: "Indian Institute of Banking & Finance (IIBF)",
+    date: "September 2023",
+  },
+  {
+    id: "jaiib",
+    name: "JAIIB",
+    issuer: "Indian Institute of Banking & Finance (IIBF)",
+    date: "January 2021",
+  },
+];
+
+export const LANGUAGES_DATA = [
+  { name: "English", level: "Professional Working Proficiency" },
+  { name: "Gujarati", level: "Native" },
+  { name: "Hindi", level: "Professional Working Proficiency" },
+];
+
+/** Career narrative milestones — aligned to CV, not a substitute for Experience. */
+export const JOURNEY_DATA = [
+  {
+    year: "2010 – 2014",
+    title: "Civil Engineering Foundation",
     description:
-      "Flagship multi-tenant HR demonstration—organization, employees, leave, attendance, payroll—with public live demo, case study, and GitHub source. Risk-based CI tiers and Docker Compose ops on Hetzner.",
-    techStack: ["PERN", "Prisma", "BullMQ", "Docker", "GitHub Actions"],
-    badge: "FLAGSHIP",
+      "Completed a B.Tech. in Civil Engineering at Pacific University — building structured problem-solving habits later applied to software design.",
+    icon: "graduation",
+  },
+  {
+    year: "2017 – 2022",
+    title: "Banking Operations",
+    description:
+      "Joined Gujarat Gramin Bank as Office Assistant (Multipurpose). Gained hands-on exposure to branch operations, cash handling, customer transactions and financial workflows.",
+    icon: "briefcase",
+  },
+  {
+    year: "2022 – 2026",
+    title: "Full-Stack Development",
+    description:
+      "Moved into a Full Stack Developer role at the same bank — building and maintaining internal web applications with React, TypeScript, Node.js, Express and PostgreSQL.",
+    icon: "code",
+  },
+  {
+    year: "2026",
+    title: "Digital Banking & Cyber Cell",
+    description:
+      "Took on digital payment operations and cyber-cell responsibilities across UPI, IMPS, NEFT and RTGS — combining software experience with payments and security-domain work.",
+    icon: "shield-check",
+  },
+  {
+    year: "2026",
+    title: "Portfolio Engineering",
+    description:
+      "Built and deployed a multi-tenant HRMS SaaS demonstration and related engineering labs — showcasing Docker, CI/CD, DevSecOps practices and AI-assisted development with Cursor.",
+    icon: "git-branch",
+  },
+];
+
+export const APPLICATIONS_DATA = [
+  {
+    id: "hrms-platform",
+    name: "Multi-Tenant HRMS SaaS",
+    description:
+      "Production-deployed portfolio project demonstrating full-stack engineering: employee management, payroll and organisational workflows with tenant isolation, authentication/RBAC, Docker Compose and CI/CD on a European VPS.",
+    techStack: [
+      "React.js",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Prisma",
+      "Redis",
+      "Docker",
+      "CI/CD",
+    ],
+    badge: "FLAGSHIP PROJECT",
     status: "Live Demo",
     url: "https://hrms.hemendrabasiya.com",
     caseStudy: "/hrms-case-study",
@@ -36,21 +170,30 @@ export const APPLICATIONS_DATA = [
   },
   {
     id: "services-lab",
-    name: "TypeScript Services Lab — Public Demo",
+    name: "TypeScript Services Lab",
     description:
-      "A public engineering laboratory demonstrating reusable enterprise security, multi-tenancy, authorization, auditability, session security, API protection, observability, Next.js architecture, and Java/Spring transaction processing—one coherent lab, not separate commercial products.",
+      "Public engineering laboratory exploring reusable security patterns, multi-tenancy, authorisation, auditability, session security and API protection — a demonstration environment, not a commercial product.",
     techStack: ["TypeScript", "Next.js", "Spring Boot", "PostgreSQL", "Docker"],
     badge: "PUBLIC DEMO",
     status: "Public Demo",
     url: "https://labs.hemendrabasiya.com",
     caseStudy: "/services-lab",
-    // github omitted until a verified public remote exists
+  },
+  {
+    id: "portfolio-website",
+    name: "Portfolio Website",
+    description:
+      "This responsive personal portfolio — React, Vite and Tailwind CSS — presenting professional experience, projects and technical capabilities.",
+    techStack: ["React", "Tailwind CSS", "Vite"],
+    status: "Live",
+    url: "https://hemendrabasiya.com",
+    github: "https://github.com/hemendrabasiya/portfolio",
   },
   {
     id: "hrms-access-control",
     name: "Multi-Tenancy & Access Control",
     description:
-      "Shared-database multi-tenancy with defense-in-depth isolation, catalog-driven RBAC, HQ-scoped authorization, and hybrid JWT + PostgreSQL sessions with rotating HttpOnly refresh tokens.",
+      "Capability demonstrated in the HRMS project: shared-database multi-tenancy with defence-in-depth isolation, catalog-driven RBAC and hybrid JWT + PostgreSQL sessions.",
     techStack: ["PostgreSQL", "Prisma", "JWT", "RBAC", "Redis"],
     status: "Capability",
     url: "https://hrms.hemendrabasiya.com",
@@ -60,7 +203,7 @@ export const APPLICATIONS_DATA = [
     id: "hrms-tenant-routing",
     name: "Wildcard Tenant Routing",
     description:
-      "Subdomain-based tenant resolution (*.domain) with CORS allowlisting via APP_DOMAIN, so each tenant reaches its own workspace login without a separate deployment per customer.",
+      "Capability demonstrated in the HRMS project: subdomain-based tenant resolution with CORS allowlisting so each tenant reaches its own workspace without a separate deployment.",
     techStack: ["Nginx", "CORS", "React", "Express"],
     status: "Capability",
     url: "https://hrms.hemendrabasiya.com",
@@ -70,7 +213,7 @@ export const APPLICATIONS_DATA = [
     id: "hrms-demo-ops",
     name: "Demo Ops & Snapshot Restore",
     description:
-      "Canonical demo snapshot tooling with pre-reset database and file backups, rollback on failure, post-restore verification, and scheduled demo-environment reset support.",
+      "Capability demonstrated in the HRMS project: canonical demo snapshot tooling with pre-reset backups, rollback on failure and scheduled demo-environment reset support.",
     techStack: ["PostgreSQL", "Docker", "systemd", "Node.js"],
     status: "Capability",
     url: "https://hrms.hemendrabasiya.com",
@@ -106,131 +249,117 @@ export const CI_TIERS_DATA = [
   },
 ];
 
-export const JOURNEY_DATA = [
-  {
-    year: "2014",
-    title: "Civil Engineering",
-    description:
-      "Graduated with a B.Tech. This built my core problem-solving framework and taught me the importance of structural integrity—principles I now apply to software architecture.",
-    icon: "graduation",
-  },
-  {
-    year: "2017",
-    title: "Banking Operations",
-    description:
-      "Developed a deep understanding of financial workflows, strict compliance, and the absolute necessity of data accuracy.",
-    icon: "briefcase",
-  },
-  {
-    year: "2020",
-    title: "Banking IT",
-    description:
-      "Transitioned into IT operations, learning the critical importance of high availability and production support in a regulated environment.",
-    icon: "server",
-  },
-  {
-    year: "2022",
-    title: "Enterprise Infrastructure",
-    description:
-      "Managed core networks, Microsoft 365, and vendor relationships with a focus on high availability for branch operations.",
-    icon: "server",
-  },
-  {
-    year: "2024",
-    title: "Software Development",
-    description:
-      "Transitioned to full-stack engineering, leveraging my operational background to write maintainable code using the PERN stack.",
-    icon: "code",
-  },
-  {
-    year: "2025",
-    title: "Enterprise HRMS",
-    description:
-      "Architected and developed a multi-tenant HRMS platform with RBAC, HQ-scoped authorization, payroll, leave, and attendance—deployed as a live demonstration environment.",
-    icon: "check",
-  },
-  {
-    year: "2025",
-    title: "DevOps",
-    description:
-      "Embraced continuous delivery. Implemented Docker Compose, GitHub Actions (risk-based CI tiers), GHCR image publish, and VPS deploy workflows for the HRMS live demo.",
-    icon: "git-branch",
-  },
-  {
-    year: "2026",
-    title: "Application Security & Operations",
-    description:
-      "Strengthened application-level security controls—RBAC, tenant isolation, rate limiting, audit logging, environment fail-closed validation—and production uptime monitoring.",
-    icon: "shield-check",
-  },
-  {
-    year: "2026",
-    title: "Services Lab & Cross-Stack Exploration",
-    description:
-      "Built a TypeScript Services Lab (tenant-guard, policy, audit ledger, session/api-guard), a Next.js Ops Console BFF, and a Java/Spring Secure Transaction API—with risk-based CI tiers and a DevSecOps maturity ladder.",
-    icon: "code",
-  },
-  {
-    year: "Future",
-    title: "Cloud & Platform Engineering (Learning)",
-    description:
-      "Currently expanding my expertise into AWS, Azure, and Kubernetes to build highly resilient, distributed systems.",
-    icon: "cloud",
-  },
-];
-
 export const SKILLS_DATA = [
   {
-    category: "Frontend Engineering",
-    description: "Building responsive, accessible, and performant user interfaces.",
-    skills: ["React", "JavaScript (ES6+)", "TypeScript", "Next.js", "Tailwind CSS", "Vite", "HTML5/CSS3"],
-  },
-  {
-    category: "Backend Engineering",
-    description: "Designing robust RESTful APIs and secure server-side logic.",
-    skills: ["Node.js", "Express.js", "REST APIs", "JWT Authentication", "Role-Based Access Control", "Zod Validation", "Spring Boot", "Java 21"],
-  },
-  {
-    category: "Database Engineering",
-    description: "Architecting relational schemas and optimizing complex queries.",
-    skills: ["PostgreSQL", "Prisma ORM", "Data Modeling", "Multi-tenancy", "Query Optimization", "Flyway", "Row-Level Security"],
-  },
-  {
-    category: "DevOps",
-    description: "Automating deployments and standardizing environments.",
-    skills: ["Docker", "Docker Compose", "GitHub Actions", "CI/CD Pipelines", "Nginx", "Linux", "GHCR", "Trivy", "SBOM"],
-  },
-  {
-    category: "Secure Development",
-    description: "Application-level security controls and defensive engineering practices.",
-    skills: ["RBAC", "Tenant Isolation", "Helmet", "Rate Limiting", "Audit Logging", "ESLint", "Zod", "Idempotency", "Refresh Reuse Detection"],
-  },
-  {
-    category: "Monitoring",
-    description: "Observing production health and operational readiness.",
-    skills: ["Uptime Kuma", "Health Checks", "Structured Logging", "Request Tracing", "Prometheus", "Actuator"],
-  },
-  {
-    category: "Enterprise Tools",
-    description: "Managing corporate IT environments and productivity suites.",
-    skills: ["Microsoft 365 Admin", "Active Directory", "ITIL Practices", "Vendor Management"],
-  },
-  {
-    category: "AI-Augmented Engineering",
-    description:
-      "Using AI as an engineering productivity tool across architecture, implementation, testing, debugging, and documentation—with human-led validation.",
+    category: "Full-Stack Development",
+    description: "End-to-end web application development with the PERN stack.",
     skills: [
-      "Agentic Coding Workflows",
-      "AI-Assisted Architecture",
-      "AI-Assisted Implementation",
-      "AI-Assisted Testing",
-      "AI-Assisted Debugging",
+      "React.js",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "REST APIs",
+      "Prisma",
+      "Tailwind CSS",
+      "Vite",
+    ],
+  },
+  {
+    category: "DevOps / DevSecOps",
+    description: "Containerisation, continuous delivery and secure delivery practices.",
+    skills: [
+      "Docker",
+      "Docker Compose",
+      "CI/CD",
+      "GitHub Actions",
+      "Nginx",
+      "Linux",
+      "Secure Coding",
+      "Automation",
+    ],
+  },
+  {
+    category: "Banking / FinTech",
+    description:
+      "Domain exposure from banking operations and digital payment support — not claims of having built the underlying rails.",
+    skills: [
+      "Digital Banking",
+      "Payment Operations",
+      "UPI",
+      "IMPS",
+      "NEFT",
+      "RTGS",
+      "Transaction Reconciliation",
+      "Banking Operations",
+    ],
+  },
+  {
+    category: "Security",
+    description: "Application security controls and cybersecurity-related operational experience.",
+    skills: [
+      "Authentication",
+      "Authorisation / RBAC",
+      "Multi-Tenant Security",
+      "Session Management",
+      "Cyber-Fraud Monitoring",
+      "Incident Investigation",
+      "Secure Configuration",
+    ],
+  },
+  {
+    category: "Tools & Workflow",
+    description: "Development tooling and AI-assisted engineering practices.",
+    skills: [
+      "Git",
+      "GitHub",
+      "Cursor",
+      "AI-Assisted Development",
       "Human-in-the-Loop Review",
     ],
   },
   {
-    category: "Cloud (Learning)",
-    description: "Expanding into scalable cloud infrastructure and orchestration.",
-    skills: ["AWS", "Azure", "Terraform", "Kubernetes"],
+    category: "Project Capabilities",
+    description:
+      "Additional technologies demonstrated in portfolio projects (HRMS and Services Lab).",
+    skills: [
+      "Redis",
+      "BullMQ",
+      "JWT",
+      "Zod",
+      "Next.js",
+      "Spring Boot",
+      "Java",
+      "GHCR",
+      "Uptime Kuma",
+    ],
+  },
+];
+
+export const SERVICES_DATA = [
+  {
+    title: "Full-Stack Web Application Development",
+    description:
+      "Design and build web applications with React, TypeScript, Node.js, Express and PostgreSQL.",
+  },
+  {
+    title: "API & Backend Development",
+    description:
+      "REST APIs, data models, authentication/authorisation and integration with business workflows.",
+  },
+  {
+    title: "Secure Application Engineering",
+    description:
+      "RBAC, session management, tenant isolation patterns and secure coding practices.",
+  },
+  {
+    title: "Docker & CI/CD",
+    description:
+      "Containerised deployments, GitHub Actions pipelines and environment-consistent delivery.",
+  },
+  {
+    title: "FinTech / Banking Technology",
+    description:
+      "Software engineering informed by banking operations, digital payments and cyber-cell exposure.",
   },
 ];

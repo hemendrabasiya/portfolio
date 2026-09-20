@@ -23,11 +23,14 @@ export const Button = ({
 
   if (href) {
     const isMailOrTel = href.startsWith("mailto:") || href.startsWith("tel:");
+    const isSameOrigin = href.startsWith("/") && !href.startsWith("//");
     return (
       <a
         href={href}
-        {...(isMailOrTel
-          ? {}
+        {...(isMailOrTel || isSameOrigin
+          ? isSameOrigin && href.endsWith(".pdf")
+            ? { download: "Hemendra-Resume.pdf" }
+            : {}
           : { target: "_blank", rel: "noopener noreferrer" })}
         className={classes}
       >

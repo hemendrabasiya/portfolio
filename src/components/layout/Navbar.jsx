@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "../../utils/portfolioData";
@@ -8,10 +8,7 @@ export const Navbar = () => {
   const location = useLocation();
   const currentPath = location.pathname.replace(/^\/+|\/+$/g, "") || "home";
 
-  // Close mobile menu on route change
-  useEffect(() => {
-    setIsOpen(false);
-  }, [location]);
+  const closeMenu = () => setIsOpen(false);
 
   return (
     <header className="sticky top-6 z-50 w-full px-4 transition-all duration-300 md:px-8">
@@ -19,6 +16,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between rounded-full glass px-6 py-3 md:py-4">
           <Link
             to="/"
+            onClick={closeMenu}
             className="flex flex-shrink-0 cursor-pointer flex-col origin-left transition-transform hover:scale-105"
           >
             <span className="text-xl font-black tracking-tight text-slate-900 md:text-2xl font-heading">
@@ -52,6 +50,7 @@ export const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="rounded-full border border-slate-200 bg-white/50 p-2 text-slate-600 transition-colors hover:text-slate-900"
               aria-label="Toggle menu"
+              aria-expanded={isOpen}
             >
               {isOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -69,6 +68,7 @@ export const Navbar = () => {
                   <Link
                     key={link.id}
                     to={path}
+                    onClick={closeMenu}
                     className={`block w-full rounded-2xl px-5 py-3.5 text-left text-base font-semibold transition-all ${
                       isActive
                         ? "border border-emerald-100/50 bg-emerald-50/80 text-emerald-600"

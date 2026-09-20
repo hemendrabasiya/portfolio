@@ -95,7 +95,7 @@ export const EngineeringPage = () => {
     <div className="py-12 md:py-20 animate-fade-in">
       <SectionHeading
         title="Engineering Philosophy & Workflow"
-        subtitle="How I design, build, deploy, operate, and continuously improve enterprise software—with AI-augmented productivity and human-led judgment."
+        subtitle="How I design, build, deploy and operate full-stack applications — with AI-assisted productivity and human-led judgment. Illustrated mainly by portfolio project practices."
       />
 
       <div className="mb-24 mt-12">

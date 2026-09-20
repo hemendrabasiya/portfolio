@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, Navigate } from "react-router-dom";
 import { Navbar } from "./components/layout/Navbar";
 import { Footer } from "./components/layout/Footer";
 import { ScrollToTop } from "./components/layout/ScrollToTop";
@@ -6,7 +6,7 @@ import { Button } from "./components/ui/Button";
 import { HomePage } from "./pages/HomePage";
 import { AboutPage } from "./pages/AboutPage";
 import { ApplicationsPage } from "./pages/ApplicationsPage";
-import { JourneyPage } from "./pages/JourneyPage";
+import { ExperiencePage } from "./pages/ExperiencePage";
 import { SkillsPage } from "./pages/SkillsPage";
 import { ContactPage } from "./pages/ContactPage";
 import { EngineeringPage } from "./pages/EngineeringPage";
@@ -34,7 +34,8 @@ export default function PortfolioApp() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/engineering" element={<EngineeringPage />} />
           <Route path="/applications" element={<ApplicationsPage />} />
-          <Route path="/journey" element={<JourneyPage />} />
+          <Route path="/experience" element={<ExperiencePage />} />
+          <Route path="/journey" element={<Navigate to="/experience" replace />} />
           <Route path="/skills" element={<SkillsPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/hrms-case-study" element={<HrmsCaseStudyPage />} />

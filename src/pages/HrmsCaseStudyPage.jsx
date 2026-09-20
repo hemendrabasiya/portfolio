@@ -50,8 +50,8 @@ export const HrmsCaseStudyPage = () => {
   return (
     <div className="py-12 md:py-20 animate-fade-in max-w-4xl mx-auto">
       <SectionHeading
-        title="Enterprise HRMS Case Study"
-        subtitle="A production-deployed multi-tenant HR demonstration platform — not a commercial SaaS product."
+        title="Multi-Tenant HRMS SaaS — Case Study"
+        subtitle="Flagship portfolio project demonstrating full-stack and DevSecOps capabilities. Not a bank employment deliverable, and not a commercial SaaS product."
       />
 
       {/* Live Demo CTAs */}

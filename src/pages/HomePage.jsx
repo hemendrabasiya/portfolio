@@ -1,33 +1,34 @@
 import { Link } from "react-router-dom";
-import { ChevronRight, Server, Database, GitBranch } from "lucide-react";
+import { ChevronRight, Code2, Building2, Shield } from "lucide-react";
 import { Button } from "../components/ui/Button";
 import { SectionHeading } from "../components/ui/SectionHeading";
-import { APPLICATIONS_DATA } from "../utils/portfolioData";
+import { APPLICATIONS_DATA, PROFILE, SERVICES_DATA } from "../utils/portfolioData";
 import { AppCard } from "../components/ui/AppCard";
+import { GithubIcon, LinkedinIcon } from "../components/icons/SocialIcons";
 
 const highlightMetrics = [
-  { label: "Banking Domain", value: "10+ Years", icon: Database },
-  { label: "Enterprise IT Ops", value: "3+ Years", icon: Server },
-  { label: "Focus", value: "Full-Stack & Production Eng.", icon: GitBranch },
+  { label: "Software Development", value: "4+ Years", icon: Code2 },
+  { label: "Banking Sector", value: "9+ Years", icon: Building2 },
+  { label: "Focus", value: "Full-Stack & FinTech", icon: Shield },
 ];
 
 const previewCards = [
   {
-    title: "Engineering Workflow",
+    title: "Experience",
     description:
-      "Explore my end-to-end SDLC process, architecture patterns, AI-augmented delivery, and production operations.",
-    target: "/engineering",
+      "Employment history from banking operations through full-stack development to digital payment and cyber-cell work.",
+    target: "/experience",
   },
   {
-    title: "Enterprise HRMS",
+    title: "Featured Project",
     description:
-      "A live multi-tenant HRMS demo—RBAC, payroll, leave, attendance—deployed on Hetzner with the PERN stack.",
+      "Multi-tenant HRMS SaaS — a portfolio demonstration of full-stack engineering, RBAC, Docker and CI/CD.",
     target: "/hrms-case-study",
   },
   {
-    title: "About Me",
+    title: "About",
     description:
-      "From infrastructure management to software development. See how enterprise IT shapes my engineering mindset.",
+      "How banking-domain knowledge and software engineering combine into a FinTech-oriented profile.",
     target: "/about",
   },
 ];
@@ -37,47 +38,98 @@ export const HomePage = () => {
     <div className="animate-fade-in">
       <section className="flex min-h-[85vh] flex-col justify-center py-20 md:py-32">
         <div className="max-w-4xl relative">
-          {/* Subtle background glow effect */}
           <div className="absolute -left-10 -top-10 h-64 w-64 rounded-full bg-emerald-500/10 blur-3xl" />
-          
+
           <div className="relative z-10">
             <div className="mb-4 inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-4 py-1.5 text-sm font-semibold text-emerald-700">
-              <span className="mr-2 flex h-2 w-2 rounded-full bg-emerald-500"></span>
-              Available for Remote Roles
+              <span className="mr-2 flex h-2 w-2 rounded-full bg-emerald-500" />
+              Open to international opportunities
             </div>
-            
-            <h1 className="mb-6 text-5xl font-extrabold leading-tight tracking-tight text-slate-900 md:text-7xl font-heading">
-              Enterprise Software <span className="heading-gradient">Engineer</span>
-            </h1>
-            
-            <p className="mb-10 text-xl md:text-2xl text-slate-600 leading-relaxed max-w-3xl">
-              Banking-domain engineer building secure multi-tenant systems with modern full-stack (PERN) development,
-              reusable platform components, and AI-augmented delivery—grounded in production operations experience.
+
+            <p className="mb-2 text-2xl font-bold tracking-tight text-slate-800 md:text-3xl font-heading">
+              {PROFILE.name}
             </p>
 
-            <div className="flex flex-col gap-4 sm:flex-row mb-16">
-              <Link to="/hrms-case-study">
-                <Button variant="primary" className="w-full sm:w-auto h-14 px-8 text-lg">
-                  View HRMS Case Study
+            <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight text-slate-900 md:text-6xl font-heading">
+              Full-Stack Developer{" "}
+              <span className="heading-gradient">&amp; Banking IT</span>
+            </h1>
+
+            <p className="mb-4 text-lg font-medium text-emerald-800 md:text-xl">
+              FinTech · Digital Banking · DevSecOps
+            </p>
+
+            <p className="mb-10 text-xl text-slate-600 leading-relaxed max-w-3xl">
+              Full-stack engineer with 4+ years of software development and 9+ years in
+              banking. Building web applications with React, TypeScript, Node.js and
+              PostgreSQL — informed by digital payment operations across UPI, IMPS, NEFT
+              and RTGS.
+            </p>
+
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap mb-8">
+              <Link to="/applications">
+                <Button variant="primary" className="w-full sm:w-auto h-12 px-6">
+                  View Projects
                 </Button>
               </Link>
-              <Link to="/engineering">
-                <Button variant="outline" className="w-full sm:w-auto h-14 px-8 text-lg bg-white/50 backdrop-blur-sm border-slate-300">
-                  Explore My Workflow
+              <Link to="/experience">
+                <Button
+                  variant="outline"
+                  className="w-full sm:w-auto h-12 px-6 bg-white/50 backdrop-blur-sm border-slate-300"
+                >
+                  View Experience
                 </Button>
+              </Link>
+              <Button
+                href={PROFILE.resumeUrl}
+                variant="outline"
+                className="w-full sm:w-auto h-12 px-6 bg-white/50 backdrop-blur-sm border-slate-300"
+              >
+                Download Resume
+              </Button>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-4 mb-16">
+              <a
+                href={PROFILE.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+              >
+                <LinkedinIcon size={18} /> LinkedIn
+              </a>
+              <a
+                href={PROFILE.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
+              >
+                <GithubIcon size={18} /> GitHub
+              </a>
+              <Link
+                to="/contact"
+                className="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors"
+              >
+                Contact
               </Link>
             </div>
 
-            {/* Metrics Highlight Banner */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-y border-slate-200 py-8 animate-slide-up" style={{ animationDelay: "200ms" }}>
-              {highlightMetrics.map((metric, i) => (
-                <div key={i} className="flex items-center space-x-4">
+            <div
+              className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-y border-slate-200 py-8 animate-slide-up"
+              style={{ animationDelay: "200ms" }}
+            >
+              {highlightMetrics.map((metric) => (
+                <div key={metric.label} className="flex items-center space-x-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-100 text-slate-600">
                     <metric.icon size={24} />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">{metric.label}</p>
-                    <p className="text-xl font-bold text-slate-900 font-heading">{metric.value}</p>
+                    <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">
+                      {metric.label}
+                    </p>
+                    <p className="text-xl font-bold text-slate-900 font-heading">
+                      {metric.value}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -108,10 +160,13 @@ export const HomePage = () => {
         </div>
       </section>
 
-      <section className="mt-8 rounded-[2rem] border border-slate-200/60 glass bg-white/50 p-8 md:p-12 mb-20 animate-slide-up" style={{ animationDelay: "300ms" }}>
+      <section
+        className="mt-8 rounded-[2rem] border border-slate-200/60 glass bg-white/50 p-8 md:p-12 mb-12 animate-slide-up"
+        style={{ animationDelay: "300ms" }}
+      >
         <SectionHeading
           title="Featured Work"
-          subtitle="HRMS Live Demo + Case Study, Services Lab Public Demo + Case Study, and verified capability areas."
+          subtitle="Portfolio projects that demonstrate engineering depth — separate from employment history."
         />
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3 mt-10">
           {APPLICATIONS_DATA.slice(0, 3).map((app) => (
@@ -122,9 +177,32 @@ export const HomePage = () => {
           <Link to="/applications">
             <Button variant="outline" className="group h-12 px-8 border-slate-300">
               View All Work
-              <ChevronRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
+              <ChevronRight
+                size={18}
+                className="ml-2 transition-transform group-hover:translate-x-1"
+              />
             </Button>
           </Link>
+        </div>
+      </section>
+
+      <section className="mb-20">
+        <SectionHeading
+          title="Professional Focus"
+          subtitle="Capabilities I can credibly contribute in full-stack and FinTech-oriented roles."
+        />
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {SERVICES_DATA.map((service) => (
+            <div
+              key={service.title}
+              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+            >
+              <h3 className="text-lg font-bold text-slate-900 font-heading mb-2">
+                {service.title}
+              </h3>
+              <p className="text-slate-600 text-sm leading-relaxed">{service.description}</p>
+            </div>
+          ))}
         </div>
       </section>
     </div>
