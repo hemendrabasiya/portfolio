@@ -3,7 +3,6 @@ export const PROFILE = {
   title: "Full-Stack Developer & Banking IT Professional (FinTech)",
   shortTitle: "Full-Stack Developer",
   email: "hemendra.basia@gmail.com",
-  phone: "+91 9429471070",
   location: "Vadodara, Gujarat, India",
   website: "https://hemendrabasiya.com",
   github: "https://github.com/hemendrabasiya",

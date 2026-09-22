@@ -1,4 +1,4 @@
-import { Briefcase, Mail, MapPin, Phone, Send, FileText } from "lucide-react";
+import { Briefcase, Mail, MapPin, Send, FileText } from "lucide-react";
 import { Button } from "../components/ui/Button";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { GithubIcon, LinkedinIcon } from "../components/icons/SocialIcons";
@@ -29,21 +29,6 @@ export const ContactPage = () => {
                   className="text-slate-600 transition-colors hover:text-emerald-600 font-medium"
                 >
                   {PROFILE.email}
-                </a>
-              </div>
-            </div>
-
-            <div className="flex items-start group">
-              <div className="mr-5 rounded-2xl bg-emerald-50 p-4 text-emerald-600 shadow-sm transition-transform group-hover:-translate-y-1 group-hover:shadow-md">
-                <Phone size={24} />
-              </div>
-              <div>
-                <h4 className="text-lg font-bold text-slate-900 font-heading">Phone</h4>
-                <a
-                  href={`tel:${PROFILE.phone.replace(/\s/g, "")}`}
-                  className="text-slate-600 transition-colors hover:text-emerald-600 font-medium"
-                >
-                  {PROFILE.phone}
                 </a>
               </div>
             </div>
